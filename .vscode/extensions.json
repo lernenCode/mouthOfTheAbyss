@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "styled-components.vscode-styled-components",
+        "kleber-swf.unity-code-snippets",
+        "alefragnani.separators",
+        "ms-ceintl.vscode-language-pack-pt-br",
+        "pkief.material-icon-theme",
+        "visualstudioexptteam.vscodeintellicode",
+        "dracula-theme.theme-dracula",
+        "deitry.unity-debug",
+        "ms-dotnettools.csharp"
+    ]
+}

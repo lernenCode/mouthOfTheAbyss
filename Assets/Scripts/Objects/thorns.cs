@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class thorns : MonoBehaviour
+{
+    [Header("Respawn")]
+    [SerializeField] private GameObject safeRespawn;
+    [SerializeField] private GameObject objectTeletransport;
+
+    [Header("Damage")]
+    [SerializeField] private LayerMask Player;
+    [SerializeField] private float takeLife;
+    private BoxCollider2D boxCol2D;
+    private bool isThorns;
+    private bool teste;
+
+    private void Start() 
+    {
+        boxCol2D = GetComponent<BoxCollider2D>();
+    }
+    private void Update() 
+    {
+        // Verficar colisao
+        isThorns = Physics2D.IsTouchingLayers(boxCol2D, Player);
+
+        if(isThorns){damage();}
+    }
+
+    public void damage()
+    {
+        // Transicao de camera
+
+        // Teletransportar para ponto de segurança
+        if(player_status.isDie == false)
+        {objectTeletransport.transform.position = safeRespawn.transform.position;}
+
+        // Tirar ponto de vida
+        player_status.reduceLife(takeLife);
+    }
+}
