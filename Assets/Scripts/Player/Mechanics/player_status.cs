@@ -56,7 +56,6 @@ public class player_status : MonoBehaviour
                 {
                     life -= value;
                     player_UI.barLife.fillAmount = life / 100;
-                    Debug.Log(life);
                     recovery = true;
                 }
             }

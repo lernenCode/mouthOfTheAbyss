@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 557519950}
   - component: {fileID: 557519947}
   - component: {fileID: 557519962}
+  - component: {fileID: 557519963}
   m_Layer: 9
   m_Name: Robot
   m_TagString: Player
@@ -1318,6 +1319,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad32d680ee23b04e9571d010a560b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &557519963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557519930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6daabc7d312284c9775a65f96a2684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 557519930}
 --- !u!4 &559739790 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6756815387574058263, guid: b06a9a43a5eb24440a71c58acae84b6b, type: 3}

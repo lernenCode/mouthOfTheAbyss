@@ -4,7 +4,6 @@ using UnityEngine;
 public class thorns : MonoBehaviour
 {
     [Header("Respawn")]
-    [SerializeField] private GameObject safeRespawn;
     [SerializeField] private GameObject objectTeletransport;
 
     [Header("Damage")]
@@ -32,7 +31,10 @@ public class thorns : MonoBehaviour
 
         // Teletransportar para ponto de segurança
         if(player_status.isDie == false)
-        {objectTeletransport.transform.position = safeRespawn.transform.position;}
+        {
+            Player_Physics2D.ResetVelocity();
+            objectTeletransport.transform.position = player_lastPosition.lastPosition;
+        }
 
         // Tirar ponto de vida
         player_status.reduceLife(takeLife);
