@@ -11,6 +11,7 @@ public class player_status : MonoBehaviour
 
     [Header("Manager Death")]
     public static bool isDie;
+    private bool lockChanger = false;
 
     [Header("Manage Damage")]
     public static bool recovery = true;
@@ -32,12 +33,10 @@ public class player_status : MonoBehaviour
     #region addLife
         public static void addLife(float value)
         {
-            if (life > 0)
-            {
-                life += value;
-                player_UI.barLife.fillAmount = life / 100;
-            }
 
+            life += value;
+            player_UI.barLife.fillAmount = life / 100;
+        
             // Evitar extrapolar
             if (life > 100)
             {
@@ -66,16 +65,18 @@ public class player_status : MonoBehaviour
                     isDie = true;
                     life = 0;// Evitar extrapolar
                 }
+
                 if (isDie)
                 {
                     // Ligar colision
-                    Support_Physics2D.boxCol.isTrigger = false;
+                    Support_Physics2D.boxCol.isTrigger = false; 
                 }
                 
                 // devolver as coisas
                 else
                 {
                     Support_Physics2D.boxCol.isTrigger = true;
+                    Support_Physics2D.ResetVelocity();
                 }
             #endregion
         }
@@ -88,12 +89,9 @@ public class player_status : MonoBehaviour
         #region addEnergy
             public static void addEnergy(float value)
             {
-                if (energy > 0)
-                {
-                    energy += value;
-                    player_UI.barEnergy.fillAmount = energy / 100;
-                }
-
+                energy += value;
+                player_UI.barEnergy.fillAmount = energy / 100;
+                
                 // Evitar extrapolar
                 if (energy > 100)
                 {
@@ -126,11 +124,8 @@ public class player_status : MonoBehaviour
         #region addStamina
             public static void addStamina(float value)
             {
-                if (stamina >= 0)
-                {
-                    stamina += value;
-                    player_UI.barStamina.fillAmount = stamina / 100;
-                }
+                stamina += value;
+                player_UI.barStamina.fillAmount = stamina / 100;
 
                 // Evitar extrapolar
                 if (stamina > 100)

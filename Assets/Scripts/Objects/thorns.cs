@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class thorns : MonoBehaviour
 {
-    [Header("Respawn")]
-    [SerializeField] private GameObject objectTeletransport;
-
     [Header("Damage")]
     [SerializeField] private LayerMask Player;
     [SerializeField] private float takeLife;
@@ -33,7 +30,7 @@ public class thorns : MonoBehaviour
         if(player_status.isDie == false)
         {
             Player_Physics2D.ResetVelocity();
-            objectTeletransport.transform.position = player_lastPosition.lastPosition;
+            Player_Physics2D.playerGameObject.transform.position = player_lastPosition.lastPosition;
         }
 
         // Tirar ponto de vida

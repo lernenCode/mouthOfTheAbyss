@@ -5,6 +5,9 @@ using UnityEngine;
 public class Support_Physics2D : MonoBehaviour
 {
     public static Rigidbody2D corpoDoPersonagem;
+    public static GameObject supportGameObject;
+    [SerializeField] private GameObject support;
+
     [Header("Move")]
     public static Vector2 Direction;
     public static BoxCollider2D boxCol;
@@ -12,6 +15,7 @@ public class Support_Physics2D : MonoBehaviour
     {
         corpoDoPersonagem = GetComponent<Rigidbody2D>();
         boxCol = GetComponent<BoxCollider2D>();
+        supportGameObject = support;
     }
 
     // Update is called once per frame

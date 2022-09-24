@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player_Physics2D : MonoBehaviour
 {
     public static Rigidbody2D corpoDoPersonagem;
+    public static GameObject playerGameObject;
+    [SerializeField] private GameObject player;
     
     [Header("Move")]
     public static Vector2 Direction;
@@ -32,6 +34,7 @@ public class Player_Physics2D : MonoBehaviour
     private void Start()
     {
         corpoDoPersonagem = GetComponent<Rigidbody2D>();
+        playerGameObject = player;
     }
 
     public static void ResetVelocity()
