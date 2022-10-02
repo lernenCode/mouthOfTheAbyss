@@ -52,6 +52,10 @@ public class emptyBody : MonoBehaviour
 
         // Voltar a vida
         player_status.isDie = false;
+        
+        //Reset Support
+        Support_Physics2D.ResetVelocity();
+        Support_Physics2D.boxCol.isTrigger = true;
         yield return 0;
     }
 }

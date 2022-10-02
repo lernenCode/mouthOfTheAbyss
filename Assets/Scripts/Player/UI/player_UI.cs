@@ -17,25 +17,11 @@ public class player_UI : MonoBehaviour
     public static Image barStamina;
     public Image StaminaBarImage;
 
-    [Header("Char Icon")]
-    public static Image CharImage;
-    public Image CharImageIcon;
-
-    [Header("Support Icon")]
-    public static Image supportImage;
-    public Image SupportImageIcon;
-
     public static Image iconActivate;
     private void Start() 
     {
         barLife = lifeBarImage;
-        CharImage = CharImageIcon;
         barEnergy = EnergyBarImage;
         barStamina = StaminaBarImage;
-        supportImage = SupportImageIcon;
     }
-   public static void chagerIconPlayer()
-   {iconActivate = CharImage;}
-   public static void chagerIconSupport()
-   {iconActivate = supportImage;}
 }

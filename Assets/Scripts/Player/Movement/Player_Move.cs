@@ -33,7 +33,7 @@ public class Player_Move : MonoBehaviour
             // Fazer movimento
             if (Player_Input.InputRight || Player_Input.InputLeft)
             {
-                if (Player_Dash.runningDash == false && RopeDraw.InputRope == false && Player_WallMove.isJumpWall == false)
+                if (Player_Dash.runningDash == false && RopeDraw.InputRope == false && Player_WallMove.isJumpWall == false && player_status.isDie == false)
                 {
                     Player_Physics2D.corpoDoPersonagem.AddForce(movement * Vector2.right);
                 }

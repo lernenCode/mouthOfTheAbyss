@@ -8,7 +8,6 @@ public class thorns : MonoBehaviour
     [SerializeField] private float takeLife;
     private BoxCollider2D boxCol2D;
     private bool isThorns;
-    private bool teste;
 
     private void Start() 
     {

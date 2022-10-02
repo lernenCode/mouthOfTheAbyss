@@ -16,6 +16,9 @@ public class Supprt_Movement : MonoBehaviour
         #region Movimentação
         if (player_status.isDie == true)
         {
+            // Perder energia
+            player_status.reduceEnergy(0.1f);
+
             // Calcular movimento X
             float targetSpeed_X = Support_Physics2D.Direction.x * moveSpeed;
             float speedDif_X = targetSpeed_X - Support_Physics2D.corpoDoPersonagem.velocity.x;

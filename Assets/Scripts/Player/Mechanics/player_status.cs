@@ -11,7 +11,7 @@ public class player_status : MonoBehaviour
 
     [Header("Manager Death")]
     public static bool isDie;
-    private bool lockChanger = false;
+    static private bool lockChanger = false;
 
     [Header("Manage Damage")]
     public static bool recovery = true;
@@ -25,6 +25,14 @@ public class player_status : MonoBehaviour
 
         #region canDamageTimer
         if(recovery == true) { StartCoroutine(Player_IEnumerator.canDamageTime());}
+        #endregion
+
+        #region  changerPoints
+        if(isDie && lockChanger == false){addLife(100); addEnergy(100); addStamina(100); lockChanger = true;}
+        #endregion
+
+        #region  EndDeath
+        if(isDie && lockChanger == false && energy <= 0){/*Voltar no ultimo Checkpoint*/};
         #endregion
     }
 
@@ -69,12 +77,15 @@ public class player_status : MonoBehaviour
                 if (isDie)
                 {
                     // Ligar colision
-                    Support_Physics2D.boxCol.isTrigger = false; 
+                    Support_Physics2D.boxCol.isTrigger = false;
+                    // Cancelar movimento
+                    Player_Physics2D.ResetVelocity(); 
                 }
                 
                 // devolver as coisas
                 else
                 {
+                    lockChanger = false;
                     Support_Physics2D.boxCol.isTrigger = true;
                     Support_Physics2D.ResetVelocity();
                 }
