@@ -55,15 +55,19 @@ public class Support_Inputs : MonoBehaviour
             else { InputDown = false; }
 
             #region Flip
-            if (InputRight)
+            // Só pode fazer isso se
+            if(player_status.energy > 0)
             {
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-                OlhandoDireita = true;
-            }
-            if (InputLeft)
-            {
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-                OlhandoDireita = false;
+                if (InputRight)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 0, 0);
+                    OlhandoDireita = true;
+                }
+                if (InputLeft)
+                {
+                    transform.localRotation = Quaternion.Euler(0, 180, 0);
+                    OlhandoDireita = false;
+                }
             }
             #endregion
         }
