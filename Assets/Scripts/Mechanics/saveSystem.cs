@@ -3,7 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 public static class saveSystem
 {
-   public static void Save(player_status player)
+   public static void Save(saveManager player)
    {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.save";

@@ -18,12 +18,6 @@ public class player_status : MonoBehaviour
 
     private void Update() 
     {
-        if(Input.GetKey("l"))
-        {LoadPlayer();}
-
-        if(Input.GetKey("p"))
-        {SavePlayer();}
-
         #region recuperar stamina
         if(stamina < 100 && Player_CheckColision.isGround == true)
         { player_status.addStamina(100); player_UI.barStamina.fillAmount = stamina / 100; }
@@ -35,10 +29,6 @@ public class player_status : MonoBehaviour
 
         #region  changerPoints
         if(isDie && lockChanger == false){addLife(100); addEnergy(100); addStamina(100); lockChanger = true;}
-        #endregion
-
-        #region  EndDeath
-        if(isDie && lockChanger == false && energy <= 0){/*Voltar no ultimo Checkpoint*/};
         #endregion
     }
 
@@ -164,32 +154,4 @@ public class player_status : MonoBehaviour
         #endregion
 
     #endregion
-
-    public void SavePlayer ()
-    {
-        saveSystem.Save(this);
-    }
-
-    public void LoadPlayer ()
-    {
-        // Arquivo
-        Data data = saveSystem.Load();
-
-        // Atualizar UI
-        player_UI.barLife.fillAmount = life / 100;
-        player_UI.barEnergy.fillAmount = energy / 100;
-        player_UI.barStamina.fillAmount = stamina / 100;
-
-        // Status
-        player_status.life = data.life;
-        player_status.energy = data.energy;
-        player_status.stamina = data.stamina;
-
-        // Position
-        Vector2 position;
-        position.x = data.playerPosition[0];
-        position.y = data.playerPosition[1];
-        transform.position = position;
-        //passar dps posição od jogador e do player no data tbm
-    }
 }
