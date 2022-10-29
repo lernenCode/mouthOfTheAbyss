@@ -9,6 +9,7 @@ public class Player_Carried : MonoBehaviour
     [SerializeField] private Transform HolderPosition;
     [SerializeField] private float rayDistance;
     public static GameObject HolderItem;
+    
     [Header("Throwable Object")]
     [SerializeField] private float throwableForce;
     [SerializeField] private float maxPressButton;

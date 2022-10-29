@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class CheckPoint : MonoBehaviour
 {
-    [SerializeField] private LayerMask Checkpoint;
+    [SerializeField] private LayerMask checkPoint;
     private BoxCollider2D boxCol2D;
-    private bool checkPoint;
+    private bool colider;
     private void Start() 
     {
         boxCol2D = GetComponent<BoxCollider2D>();
@@ -14,11 +13,10 @@ public class CheckPoint : MonoBehaviour
     void Update()
     {
         // Verficar colisao
-        checkPoint = Physics2D.IsTouchingLayers(boxCol2D, Checkpoint);
-
-        if(checkPoint){save();}
+        colider = Physics2D.IsTouchingLayers(boxCol2D, checkPoint);
+        if(colider){save();}
     }
 
-    void save()
+    public void save()
     {gameObject.GetComponent<saveManager>().SavePlayer();}
 }

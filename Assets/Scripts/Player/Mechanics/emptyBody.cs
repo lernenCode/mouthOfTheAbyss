@@ -37,16 +37,6 @@ public class emptyBody : MonoBehaviour
         Player_Physics2D.playerGameObject.transform.position = new Vector2
         (abandonedCarcass.transform.position.x,abandonedCarcass.transform.position.y);
 
-        // dar novos atributos se tiver conforme o corpo que estiver aqui utilizar de bools e ifs
-        if (cherry)
-        {
-            Debug.Log("Jogando com cherry");
-        }
-        if (fred)
-        {
-            Debug.Log("Jogando com fred");
-        }
-
         // deletar o corpo caido
         abandonedCarcass.SetActive(false);
 
