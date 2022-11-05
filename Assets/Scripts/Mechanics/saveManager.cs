@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class saveManager : MonoBehaviour
 {   
@@ -15,6 +16,9 @@ public class saveManager : MonoBehaviour
     {
         // Arquivo
         Data data = saveSystem.Load();
+
+        // Scena
+        SceneManager.LoadScene(data.scene);
 
         // Status
         player_status.life = data.life;

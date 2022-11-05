@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class Data
@@ -11,11 +12,13 @@ public class Data
     public float[] playerPosition;
     public float[] supportPosition;
     public bool isDie;
-    public int scene;
+    public string scene;
+
     public Data (saveManager player)
     {
-        //scene = 
+        scene = SceneManager.GetActiveScene().name;
         isDie = player_status.isDie;
+        Debug.Log(scene);
 
         life = player_status.life;
         energy = player_status.energy;

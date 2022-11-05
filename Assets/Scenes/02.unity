@@ -123,6 +123,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &183776999
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.025112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.49978158
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -7.1496253
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965370, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223142841798965372, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: m_Name
+      value: espinho
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502962006249268686, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: safeRespawn
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8502962006249268686, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
+      propertyPath: objectTeletransport
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a70bedb2a0526c842b2752e43296ebda, type: 3}
 --- !u!1 &320285673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1425,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 576573866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.55, y: 5.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1372,7 +1445,7 @@ GameObject:
   - component: {fileID: 1153937361}
   m_Layer: 0
   m_Name: confiner
-  m_TagString: Untagged
+  m_TagString: Confiner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1402,11 +1475,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -9.584137, y: 13.525185}
+    - - {x: -9.52606, y: 23.14765}
       - {x: -9.52606, y: 23.147648}
-      - {x: -26.682384, y: 23.54963}
-      - {x: -27.08437, y: 6.049631}
-      - {x: -9.66608, y: 6.2506227}
+      - {x: -26.682384, y: 23.14765}
+      - {x: -26.68238, y: 6.049631}
+      - {x: -9.52606, y: 6.049631}
 --- !u!4 &1153937362
 Transform:
   m_ObjectHideFlags: 0
