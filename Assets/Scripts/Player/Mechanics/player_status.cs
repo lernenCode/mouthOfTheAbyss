@@ -74,6 +74,7 @@ public class player_status : MonoBehaviour
                 {
                     // Ligar colision
                     Support_Physics2D.boxCol.isTrigger = false;
+                    
                     // Cancelar movimento
                     Player_Physics2D.ResetVelocity(); 
                 }

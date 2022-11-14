@@ -5,12 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class LoadScenes : MonoBehaviour
 {
+    [Header("Load")]
     [SerializeField] private int faseParaCarregar;
     void OnTriggerEnter2D(Collider2D hit) 
     {
         if(hit.tag == "Player")
         {
-            SceneManager.LoadScene(faseParaCarregar);
+            #region load
+                SceneManager.LoadScene(faseParaCarregar);
+            #endregion
         }
     }
 }

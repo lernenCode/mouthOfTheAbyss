@@ -7,6 +7,20 @@ public class saveManager : MonoBehaviour
 {   
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject support;
+
+    private bool loading = false;
+    private  Vector3 positionPlayer;
+    private  Vector3 positionSupport;
+
+    private void Update() 
+    {
+        if(loading == true)
+        {
+            // garantir que ta tudo ok 
+            if(player.transform.position != positionPlayer){ player.transform.position = positionPlayer;} else {loading = false;}
+        }
+    }
+
     public void SavePlayer ()
     {
         saveSystem.Save(this);
@@ -16,6 +30,8 @@ public class saveManager : MonoBehaviour
     {
         // Arquivo
         Data data = saveSystem.Load();
+
+        loading = true; 
 
         // Scena
         SceneManager.LoadScene(data.scene);
@@ -34,21 +50,23 @@ public class saveManager : MonoBehaviour
         player_status.isDie = data.isDie;
 
         // Position player
-        Vector2 positionPlayer;
         positionPlayer.x = data.playerPosition[0];
         positionPlayer.y = data.playerPosition[1];
+        positionPlayer.z = data.playerPosition[2];
         player.transform.position = positionPlayer;
 
         // Position Support
-        Vector2 positionSupport;
         positionSupport.x = data.supportPosition[0];
         positionSupport.y = data.supportPosition[1];
-        support.transform.position = positionSupport;
+        positionSupport.z = data.supportPosition[2];
+        support.transform.position = positionSupport; 
+
 
         if(player_status.isDie == false)
         {
             Support_Physics2D.boxCol.isTrigger = true;
             Support_Physics2D.ResetVelocity();
         }
+
     }
 }
