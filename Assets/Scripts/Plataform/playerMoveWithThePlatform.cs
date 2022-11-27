@@ -5,6 +5,7 @@ using UnityEngine;
 public class playerMoveWithThePlatform : MonoBehaviour
 {
     [SerializeField] private Transform PersistentScene;
+    
     private void OnCollisionEnter2D(Collision2D col) 
     {
         if(col.gameObject.CompareTag("platform"))

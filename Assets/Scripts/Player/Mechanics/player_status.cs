@@ -19,7 +19,7 @@ public class player_status : MonoBehaviour
     private void Update() 
     {
         #region recuperar stamina
-        if(stamina < 100 && Player_CheckColision.isGround == true)
+        if(stamina < 100 && Player_CheckColision.isGround == true ||stamina < 100 && Player_CheckColision.isPlatform)
         { player_status.addStamina(100); player_UI.barStamina.fillAmount = stamina / 100; }
         #endregion
 

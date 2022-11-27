@@ -78,13 +78,13 @@ public class Player_Input : MonoBehaviour
                 else { InputJump = false; }
 
                 //CoyoteJump
-                if (Player_CheckColision.isGround)
+                if (Player_CheckColision.isGround || Player_CheckColision.isPlatform)
                 { coyoteTimeCounter = coyoteTime; }
                 else { coyoteTimeCounter -= Time.deltaTime; }
                 if (Input.GetButtonUp("Jump")) { coyoteTimeCounter = 0f; }
 
                 // InputWallJump
-                if (Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isGround == false)
+                if (Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isGround == false || Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isPlatform == false)
                 {
                     InputWallJump = true;
                 }

@@ -7,6 +7,9 @@ public class Player_CheckColision : MonoBehaviour
     [Header("CheckGround")]
     public static bool isGround;
 
+    [Header("CheckPlatform")]
+    public static bool isPlatform;
+
     [Header("WallCheck")]
     public static bool isWall;
     public static bool isWallRight;
@@ -15,15 +18,15 @@ public class Player_CheckColision : MonoBehaviour
     [Header("Em comun")]
     [SerializeField] private LayerMask whatisGround;
     [SerializeField] private LayerMask whatIsCatchable;
+    [SerializeField] private LayerMask whatIsPlatform;
     [SerializeField] private BoxCollider2D boxCol2D;
 
     #region CheckGround
 
     private void Update()
     {
-        isGround = isGrounded();
-        isWallLeft = isWalledLeft();
-        isWallRight =  isWalledRight();
+        isGround = isGrounded();        isWallLeft = isWalledLeft();    
+        isPlatform = isPlatformed();    isWallRight =  isWalledRight();
         if(isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
     }
     private bool isGrounded()
@@ -44,6 +47,14 @@ public class Player_CheckColision : MonoBehaviour
     {
         RaycastHit2D isWallRight = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatisGround | whatIsCatchable);
         return isWallRight.collider != null;
+    }
+    #endregion
+
+    #region CheckPlatform
+    private bool isPlatformed()
+    {
+        RaycastHit2D isPlatform = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatIsPlatform);
+        return isPlatform.collider != null;
     }
     #endregion
 }

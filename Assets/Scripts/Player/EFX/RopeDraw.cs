@@ -28,7 +28,7 @@ public class RopeDraw : MonoBehaviour
         #region  cooldown
             if(devolverRope == true)
             {
-                if(Player_CheckColision.isGround || Player_CheckColision.isWall)
+                if(Player_CheckColision.isGround || Player_CheckColision.isWall || Player_CheckColision.isPlatform)
                 {
                     RopeInCooldown = false;
                     devolverRope = false;

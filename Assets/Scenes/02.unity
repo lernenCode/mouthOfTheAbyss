@@ -2071,6 +2071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: movableGroud
       objectReference: {fileID: 0}
+    - target: {fileID: 5551546587831790517, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5551546587831790522, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
       propertyPath: m_Material
       value: 

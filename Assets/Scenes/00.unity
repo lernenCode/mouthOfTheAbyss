@@ -942,7 +942,6 @@ GameObject:
   - component: {fileID: 557519952}
   - component: {fileID: 557519947}
   - component: {fileID: 557519963}
-  - component: {fileID: 557519966}
   - component: {fileID: 557519954}
   - component: {fileID: 557519960}
   - component: {fileID: 557519950}
@@ -1273,21 +1272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb2500d814432754396917f66116e0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &557519966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557519930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 584b89b98feda56479c6091159df6ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkPoint:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &557519967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,6 +2915,9 @@ MonoBehaviour:
   whatIsCatchable:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 4096
   boxCol2D: {fileID: 557519961}
 --- !u!1 &1961224894
 GameObject:

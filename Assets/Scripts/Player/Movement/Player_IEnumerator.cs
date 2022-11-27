@@ -20,7 +20,7 @@ public class Player_IEnumerator : MonoBehaviour
     public static IEnumerator cooldownDash(float dashCooldown) // cooldown de Dash⌚
     {
         yield return new WaitForSeconds(dashCooldown);
-        if (Player_CheckColision.isGround || Player_CheckColision.isWall)
+        if (Player_CheckColision.isGround || Player_CheckColision.isWall || Player_CheckColision.isPlatform)
         {
             Player_Dash.dashInCooldown = false;
         }
