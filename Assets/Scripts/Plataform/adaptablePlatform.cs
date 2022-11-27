@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class adaptablePlatform : MonoBehaviour
 {
-    public Transform[] target;
-
-    public float moveSpeed;
-    public int atualTarget = 0;
-    public int maxTarget = 0;
-    public bool advancing = true;
+    #region Variaveis
+    [Header("Platform")]
+        public float moveSpeed;
+        
+    [Header("Points")]
+        public Transform[] target;
+        private int atualTarget = 0;
+        private int maxTarget = 0;
+        private bool advancing = true;
+    #endregion
     private void Start() 
     {
         maxTarget = target.Length - 1;
@@ -20,10 +24,11 @@ public class adaptablePlatform : MonoBehaviour
     }
     void Update()
     {
+        // avançando ou voltando
         if(advancing == true){ advancingMovePlataform(atualTarget);} else {retreatingMovePlataform(atualTarget);}
     }
 
-    void advancingMovePlataform(int targ)
+    void advancingMovePlataform(int targ) // Avançar
     {
         if(transform.position != target[targ].position) // só vou me mover enquanto minha posição for diferente do alvo
         {transform.position = Vector2.MoveTowards(transform.position, target[targ].position, moveSpeed * Time.deltaTime);}
@@ -33,7 +38,7 @@ public class adaptablePlatform : MonoBehaviour
         if(atualTarget == maxTarget){advancing = false;}
     }
 
-    void retreatingMovePlataform(int targ)
+    void retreatingMovePlataform(int targ) // Retornar
     {
         if(transform.position != target[targ].position) // só vou me mover enquanto minha posição for diferente do alvo
         {transform.position = Vector2.MoveTowards(transform.position, target[targ].position, moveSpeed * Time.deltaTime);}

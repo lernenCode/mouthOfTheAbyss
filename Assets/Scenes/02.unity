@@ -2029,11 +2029,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5551546587411865740, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.06
+      value: -13.08
       objectReference: {fileID: 0}
     - target: {fileID: 5551546587411865740, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.07
+      value: 9.98
       objectReference: {fileID: 0}
     - target: {fileID: 5551546587411865740, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2070,6 +2070,14 @@ PrefabInstance:
     - target: {fileID: 5551546587411865741, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
       propertyPath: m_Name
       value: movableGroud
+      objectReference: {fileID: 0}
+    - target: {fileID: 5551546587831790522, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 66dea47b396bafd42a81b897b0093a20, type: 2}
+    - target: {fileID: 5551546587831790523, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}
+      propertyPath: moveSpeed
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61f8bfd721d9c6742bc366b375da5467, type: 3}

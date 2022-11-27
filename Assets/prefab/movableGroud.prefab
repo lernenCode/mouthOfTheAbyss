@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 5551546587831790523}
   m_Layer: 3
   m_Name: Plataform
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   - {fileID: 5551546586516572231}
   - {fileID: 5551546588374658346}
   - {fileID: 5551546588004517123}
-  moveSpeed: 10
+  moveSpeed: 5
   atualTarget: 0
   maxTarget: 0
   advancing: 1
