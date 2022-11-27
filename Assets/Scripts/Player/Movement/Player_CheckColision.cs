@@ -9,6 +9,9 @@ public class Player_CheckColision : MonoBehaviour
 
     [Header("CheckPlatform")]
     public static bool isPlatform;
+    public static bool isPlatformGrounded;
+    public static bool isPlatformRight;
+    public static bool isPlatformLeft;
 
     [Header("WallCheck")]
     public static bool isWall;
@@ -25,8 +28,19 @@ public class Player_CheckColision : MonoBehaviour
 
     private void Update()
     {
-        isGround = isGrounded();        isWallLeft = isWalledLeft();    
-        isPlatform = isPlatformed();    isWallRight =  isWalledRight();
+        // Ground
+        isGround = isGrounded();   
+
+        // Wall
+        isWallLeft = isWalledLeft();
+        isWallRight =  isWalledRight();
+
+        // platform
+        isPlatformGrounded = isPlatformed();
+        isPlatformLeft = isPlatformedLeft();
+        isPlatformRight = isPlatformedRight();
+        
+        if(isPlatformedRight() || isPlatformedLeft() || isPlatformed()) {isPlatform = true;} else {isPlatform = false;}
         if(isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
     }
     private bool isGrounded()
@@ -53,8 +67,20 @@ public class Player_CheckColision : MonoBehaviour
     #region CheckPlatform
     private bool isPlatformed()
     {
-        RaycastHit2D isPlatform = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatIsPlatform);
-        return isPlatform.collider != null;
+        RaycastHit2D isPlatformGrounded = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatIsPlatform);
+        return isPlatformGrounded.collider != null;
+    }
+
+     private bool isPlatformedLeft()
+    {
+        RaycastHit2D isPlatformLeft = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatIsPlatform);
+        return isPlatformLeft.collider != null;
+    }
+
+     private bool isPlatformedRight()
+    {
+        RaycastHit2D isPlatformRight = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatIsPlatform);
+        return isPlatformRight.collider != null;
     }
     #endregion
 }

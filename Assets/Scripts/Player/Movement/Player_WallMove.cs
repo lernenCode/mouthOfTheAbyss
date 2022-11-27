@@ -24,7 +24,7 @@ public class Player_WallMove : MonoBehaviour
         if(Player_Carried.HolderItem == null)
         {
             //> O PERSONAGEM PODE ESCORREGAR NA PAREDE
-            if (Player_CheckColision.isWall)
+            if (Player_CheckColision.isWall || Player_CheckColision.isPlatformRight || Player_CheckColision.isPlatformLeft)
             {
                 if (Player_Input.InputRight || Player_Input.InputLeft)
                 {
@@ -39,8 +39,8 @@ public class Player_WallMove : MonoBehaviour
                 // Tirar energia
                 player_status.reduceStamina(takeStaminaJump);
                 isJumpWall = true;
-                if (Player_CheckColision.isWallRight /*&& Player_Input.OlhandoDireita == true*/) { isJumpWallLeft = true; }
-                if (Player_CheckColision.isWallLeft /*&& Player_Input.OlhandoDireita == false*/) { isJumpWallRight = true; }
+                if (Player_CheckColision.isWallRight || Player_CheckColision.isPlatformRight ) { isJumpWallLeft = true; }
+                if (Player_CheckColision.isWallLeft || Player_CheckColision.isPlatformLeft) { isJumpWallRight = true; }
             }
 
             if(isJumpRope)

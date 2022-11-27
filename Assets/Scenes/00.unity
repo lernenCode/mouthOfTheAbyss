@@ -1643,6 +1643,9 @@ MonoBehaviour:
   whatIsCatchable:
     serializedVersion: 2
     m_Bits: 64
+  whatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 4096
   takeEnergy: 5
   ropeDuration: 0.5
   firePoint: {fileID: 1961224895}

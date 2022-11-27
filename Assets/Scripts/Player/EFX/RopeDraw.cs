@@ -8,6 +8,7 @@ public class RopeDraw : MonoBehaviour
     [Header("DrawLine")]
     [SerializeField] private LayerMask whatIsColision;
     [SerializeField] private LayerMask whatIsCatchable;
+    [SerializeField] private LayerMask whatIsPlatform;
     [SerializeField] private float takeEnergy;
     [SerializeField] private float ropeDuration;
     public Transform firePoint, Destination;
@@ -38,7 +39,7 @@ public class RopeDraw : MonoBehaviour
         #region DrawRope
         if (InputRope)
         {
-            if (Player_CheckColision.isWall)
+            if (Player_CheckColision.isWall || Player_CheckColision.isPlatform)
             {
                 returningRope = false;
                 InputRope = false;
@@ -70,7 +71,7 @@ public class RopeDraw : MonoBehaviour
             else { hook(); }
         }
 
-        if (Player_CheckColision.isWall)
+        if (Player_CheckColision.isWall || Player_CheckColision.isPlatform)
         {
             lineRenderer.SetPosition(0, new Vector3(0, 0, 0));
             lineRenderer.SetPosition(1, new Vector3(0, 0, 0));
@@ -146,7 +147,7 @@ public class RopeDraw : MonoBehaviour
     {
         if (returningRope == false)
         {
-            RaycastHit2D hit = Physics2D.Raycast(firePoint.position, transform.TransformDirection(Vector2.right), distance * Counter, whatIsColision | whatIsCatchable);
+            RaycastHit2D hit = Physics2D.Raycast(firePoint.position, transform.TransformDirection(Vector2.right), distance * Counter, whatIsColision | whatIsCatchable | whatIsPlatform);
             if (hit) { RopeInColision = true; } else { RopeInColision = false; }
         }
     }

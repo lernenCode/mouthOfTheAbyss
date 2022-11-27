@@ -40,10 +40,13 @@ public class Player_RopeMove : MonoBehaviour
         }
 
         // baque da parede
-        if (GraplingRope && Player_CheckColision.isWall)
+        if (GraplingRope)
         {
-            Player_WallMove.isJumpRope = true;
-            GraplingRope = false;
+            if(Player_CheckColision.isWall || Player_CheckColision.isPlatform)
+            {
+                Player_WallMove.isJumpRope = true;
+                GraplingRope = false;
+            }
         }
 
         // StopGravity e movement
