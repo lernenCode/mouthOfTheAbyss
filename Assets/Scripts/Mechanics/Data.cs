@@ -29,7 +29,6 @@ public class Data
         playerPosition[1] = player_lastPosition.lastPosition.y;
         playerPosition[2] = player_lastPosition.lastPosition.z;
 
-
         supportPosition = new float[3];
         supportPosition[0] = player_lastPosition.lastPositionSupport.x;
         supportPosition[1] = player_lastPosition.lastPositionSupport.y;

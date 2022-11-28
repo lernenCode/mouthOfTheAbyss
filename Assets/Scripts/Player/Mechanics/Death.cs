@@ -13,6 +13,7 @@ public class Death : MonoBehaviour
 
     void reload()
     {
+        Player_Physics2D.corpoDoPersonagem.simulated = true;
         gameObject.GetComponent<saveManager>().LoadPlayer();
     }
 }
