@@ -46,8 +46,8 @@ public class Player_WallMove : MonoBehaviour
             if(isJumpRope)
             {
                 isJumpWall = true;
-                if (Player_CheckColision.isWallRight) { isJumpWallLeft = true; }
-                if (Player_CheckColision.isWallLeft) { isJumpWallRight = true; }
+                if (Player_CheckColision.isWallRight || Player_CheckColision.isPlatformRight ) { isJumpWallLeft = true; }
+                if (Player_CheckColision.isWallLeft || Player_CheckColision.isPlatformLeft) { isJumpWallRight = true; }
             }
         }
 
@@ -55,13 +55,13 @@ public class Player_WallMove : MonoBehaviour
     private void FixedUpdate()
     {
         //> O PERSONAGEM PODE ESCORREGAR NA PAREDE
-        if (isSliding && Player_Carried.HolderItem == null && isJumpWall == false)
+        if (isSliding && Player_Carried.HolderItem == null && isJumpWall == false && player_status.stamina >= takeStaminaSliding)
         {
             Player_Physics2D.corpoDoPersonagem.velocity = new Vector2(Player_Physics2D.corpoDoPersonagem.velocity.x, Mathf.Clamp(Player_Physics2D.corpoDoPersonagem.velocity.y, -slidVelocity, float.MaxValue));
         }
 
         //> O PERSONAGEM PODE PULAR DE UM LADO PARA O OUTRO NA PAREDE
-        if (isJumpWall == true)
+        if (isJumpWall == true && player_status.stamina >= takeStaminaSliding)
         {
             StartCoroutine(Player_IEnumerator.wallJumpDuration(wallJumpDuration));
 

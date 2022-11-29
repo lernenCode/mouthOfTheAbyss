@@ -84,7 +84,9 @@ public class Player_Input : MonoBehaviour
                 if (Input.GetButtonUp("Jump")) { coyoteTimeCounter = 0f; }
 
                 // InputWallJump
-                if (Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isGround == false || Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isPlatform == false)
+                if (Input.GetButtonDown("Jump") && Player_CheckColision.isWall == true && Player_CheckColision.isGround == false 
+                || Input.GetButtonDown("Jump") && Player_CheckColision.isPlatformLeft == true && Player_CheckColision.isPlatformGrounded == false
+                || Input.GetButtonDown("Jump") && Player_CheckColision.isPlatformRight == true && Player_CheckColision.isPlatformGrounded == false)
                 {
                     InputWallJump = true;
                 }
