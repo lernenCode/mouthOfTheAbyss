@@ -50,7 +50,7 @@ public class Supprt_Movement : MonoBehaviour
                 }
                 else { Support_Physics2D.corpoDoPersonagem.velocity = new Vector2(Support_Physics2D.corpoDoPersonagem.velocity.x, 0); }
             } else {Support_Physics2D.ResetVelocity();}
-        }
+        } else {Support_Physics2D.ResetVelocity();}
         #endregion
 
     }

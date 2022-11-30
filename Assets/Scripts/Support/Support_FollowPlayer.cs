@@ -26,8 +26,8 @@ public class Support_FollowPlayer : MonoBehaviour
             if (Player_Carried.HolderItem != null)
             {
                 moveSpeed = debuffSpeed;
-            }
-            else { moveSpeed = startSpeed; }
+            } else { moveSpeed = startSpeed; }
+            
             if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
             {
                 transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);

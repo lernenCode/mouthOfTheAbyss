@@ -44,6 +44,7 @@ public class emptyBody : MonoBehaviour
         player_status.isDie = false;
         
         //Reset Support
+        Player_Physics2D.corpoDoPersonagem.simulated = true;
         Support_Physics2D.ResetVelocity();
         Support_Physics2D.boxCol.isTrigger = true;
         yield return 0;
