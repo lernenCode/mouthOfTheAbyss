@@ -9,7 +9,7 @@ public class enemyPatrolGrab : MonoBehaviour
    public LayerMask whatIsObstacle2;
    public LayerMask whatIsObstacle3;
    public GameObject wallCheck;
-   public GameObject gorundCheck;
+   public GameObject groundCheck;
    public float rangeGroundCheck;
    public float rangeWallCheck;
 
@@ -81,7 +81,7 @@ public class enemyPatrolGrab : MonoBehaviour
    private void checkCol()
    {
         // Identificar colisão com o chao
-        isGroud = Physics2D.OverlapCircle(gorundCheck.transform.position, rangeGroundCheck, whatIsObstacle1 | whatIsObstacle2 | whatIsObstacle3);
+        isGroud = Physics2D.OverlapCircle(groundCheck.transform.position, rangeGroundCheck, whatIsObstacle1 | whatIsObstacle2 | whatIsObstacle3);
         
         // Identificar colisão com a parede
         isWall = Physics2D.OverlapCircle(wallCheck.transform.position, rangeWallCheck, whatIsObstacle1 | whatIsObstacle2 | whatIsObstacle3);
@@ -91,7 +91,7 @@ public class enemyPatrolGrab : MonoBehaviour
    {
         // Desenhar range do sensor do chao
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(gorundCheck.transform.position, rangeGroundCheck);
+        Gizmos.DrawWireSphere(groundCheck.transform.position, rangeGroundCheck);
 
         // Desenhar range do sensor da parede
         Gizmos.color = Color.red;
