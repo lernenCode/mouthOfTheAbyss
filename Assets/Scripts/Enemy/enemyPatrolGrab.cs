@@ -4,87 +4,117 @@ using UnityEngine;
 
 public class enemyPatrolGrab : MonoBehaviour
 {
+   // Utilizaremos apenas uma LayerMask para verificar a colisão
    [Header("Sensor")]
+   public LayerMask whatIsObstacle0;
    public LayerMask whatIsObstacle1;
    public LayerMask whatIsObstacle2;
-   public LayerMask whatIsObstacle3;
    public GameObject wallCheck;
    public GameObject groundCheck;
    public float rangeGroundCheck;
    public float rangeWallCheck;
 
-   [Header("Movimentanção")]
+   [Header("Movimentação")]
    public float speed;
 
+   // Utilizaremos uma estrutura de controle para gerenciar a rotação do personagem
    [Header("DEBUG")]
-   public bool isGroud;
-   public bool isWall;
-   public bool inRotation;
    public Vector2 holdPosition;
    public float ZAxis;
 
-   [Header("Componenetes")]
+   [Header("Componentes")]
    private Rigidbody2D rb;
+
+   // Utilizaremos constantes para facilitar a manutenção do código
+   private const float ROTACAO_PADRAO = 90f;
+   private const float ROTACAO_MINIMA = -360f;
+   private const float ROTACAO_MAXIMA = 360f;
 
    private void Start() { rb = GetComponent<Rigidbody2D>();}
 
    private void Update() 
    {
         /*Chamar funções*/
-        checkCol(); // Responsavel por verificar a colisão
-        move(); // Responsavel pela movimentação
-        rotate(); // Responsavel pela rotação
+        Mover(); // Responsável pela movimentação
+        Rotacionar(); // Responsável pela rotação
    }
 
-   private void rotate()
+     private void Rotacionar()
    {
-        // Chao rotaciona - 90 
-        if(isGroud == false)
+        // Utilizaremos uma estrutura de controle para gerenciar a rotação do personagem
+        if (!VerificarColisaoChao())
         {   
-            if(inRotation == false)
-            {
-                ZAxis -= 90;
-                transform.eulerAngles = new Vector3(0, 0, ZAxis);
-                inRotation = true;
-            } 
-        } else {inRotation = false;}
-
-        // Parede rotaciona + 90 
-        if(isWall == true)
+            // Rotaciona o personagem em -90 graus
+            ZAxis -= ROTACAO_PADRAO;
+            transform.eulerAngles = new Vector3(0, 0, ZAxis);
+        } 
+        else if (VerificarColisaoParede())
         {   
-            if(inRotation == false)
-            {
-               ZAxis += 90;
-               transform.eulerAngles = new Vector3(0, 0, ZAxis);
-               
-               if(transform.position.y >= 0){if (ZAxis == 0   || ZAxis == 180 || ZAxis == -180 ||ZAxis == 360)  {transform.position = new Vector2 (transform.position.x , transform.position.y +1);}}
-               else { if (ZAxis == 0   || ZAxis == 180 || ZAxis == -180 ||ZAxis == 360)  {transform.position = new Vector2 (transform.position.x , transform.position.y -1);}}
-               
-               if(transform.position.x >= 0) { if (ZAxis == 270 || ZAxis == 90  || ZAxis == -90  ||ZAxis == -270) {transform.position = new Vector2 (transform.position.x +1, transform.position.y);}}
-               else { if (ZAxis == 270 || ZAxis == 90  || ZAxis == -90  ||ZAxis == -270) {transform.position = new Vector2 (transform.position.x -1, transform.position.y);}}
-              
-               inRotation = true;
-            } 
-        } else {inRotation = false;}
+            // Rotaciona o personagem em +90 graus
+            ZAxis += ROTACAO_PADRAO;
+            transform.eulerAngles = new Vector3(0, 0, ZAxis);
 
-        //Controlador de direccion
-        if (ZAxis <= -360)  {ZAxis = 0;}
-        if (ZAxis >=  360)  {ZAxis = 0;}
+            // Atualiza a posição do personagem de acordo com a rotação
+            AtualizarPosicaoAposRotacao();
+        }
 
+        // Controlador de direccion
+        // Utilizaremos uma estrutura de controle para gerenciar o limite de rotação do personagem
+        if (ZAxis == ROTACAO_MINIMA 
+        ||  ZAxis == ROTACAO_MAXIMA) {ZAxis = 0;}
+        
+        if (ZAxis <= ROTACAO_MINIMA)  {ZAxis = ROTACAO_MINIMA;}
+        if (ZAxis >= ROTACAO_MAXIMA)  {ZAxis = ROTACAO_MAXIMA;}
    }
 
-   private void move()
+   private void Mover()
    {
+        // Utilizamos o método "velocity" para mover o personagem na direção correta
         rb.velocity = transform.right * speed;
    }
-
-   private void checkCol()
+   private bool VerificarColisaoChao()
    {
         // Identificar colisão com o chao
-        isGroud = Physics2D.OverlapCircle(groundCheck.transform.position, rangeGroundCheck, whatIsObstacle1 | whatIsObstacle2 | whatIsObstacle3);
-        
+        return Physics2D.OverlapCircle(groundCheck.transform.position, rangeGroundCheck, whatIsObstacle0 | whatIsObstacle1 | whatIsObstacle2);
+   }
+
+   private bool VerificarColisaoParede()
+   {
         // Identificar colisão com a parede
-        isWall = Physics2D.OverlapCircle(wallCheck.transform.position, rangeWallCheck, whatIsObstacle1 | whatIsObstacle2 | whatIsObstacle3);
+        return Physics2D.OverlapCircle(wallCheck.transform.position, rangeWallCheck, whatIsObstacle0 | whatIsObstacle1 | whatIsObstacle2);
+   }
+
+    private void AtualizarPosicaoAposRotacao()
+   {
+        if(transform.position.y >= 0)
+        {
+            if (ZAxis == 0   || ZAxis == 180 || ZAxis == -180 || ZAxis == 360)  
+            {
+                transform.position = new Vector2 (transform.position.x , transform.position.y + 1);
+            }
+        }
+        else 
+        {
+            if (ZAxis == 0   || ZAxis == 180 || ZAxis == -180 || ZAxis == 360)  
+            {
+                transform.position = new Vector2 (transform.position.x , transform.position.y - 1);
+            }
+        }
+
+        if(transform.position.x >= 0)
+        {
+            if (ZAxis == 270 || ZAxis == 90  || ZAxis == -90  || ZAxis == -270) 
+            {
+                transform.position = new Vector2 (transform.position.x + 1, transform.position.y);
+            }
+        }
+        else 
+        {
+            if (ZAxis == 270 || ZAxis == 90  || ZAxis == -90  || ZAxis == -270) 
+            {
+                transform.position = new Vector2 (transform.position.x - 1, transform.position.y);
+            }
+        }
    }
 
    private void OnDrawGizmosSelected() 

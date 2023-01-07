@@ -15,13 +15,13 @@ public class enemySimplePatrol : MonoBehaviour
     private GameObject wallCheck;
 
     [SerializeField]
-    private GameObject gorundCheck;
+    private GameObject groundCheck;
     private bool isGround,
         isWall;
 
     [Header("Layers")]
     [SerializeField]
-    private LayerMask whatisGround;
+    private LayerMask whatIsGround;
 
     [SerializeField]
     private LayerMask whatIsCatchable;
@@ -30,7 +30,7 @@ public class enemySimplePatrol : MonoBehaviour
     private LayerMask whatIsPlatform;
 
     [Header("Componentes")]
-    private BoxCollider2D boxCol2D;
+    private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
 
     [Header("Movimentanção")]
@@ -38,63 +38,66 @@ public class enemySimplePatrol : MonoBehaviour
     private float speed;
 
     [SerializeField]
-    private bool OlhandoDireita;
+    private bool lookingRight;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCol2D = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
     {
         #region Check
-        // Identificar colisão com o chao
+        // Identificar colisão com o chão
         isGround = Physics2D.OverlapCircle(
-            gorundCheck.transform.position,
+            groundCheck.transform.position,
             rangeGroundCheck,
-            whatIsCatchable | whatisGround | whatIsPlatform
+            whatIsCatchable | whatIsGround | whatIsPlatform
         );
 
         // Identificar colisão com a parede
         isWall = Physics2D.OverlapCircle(
             wallCheck.transform.position,
             rangeWallCheck,
-            whatIsCatchable | whatisGround | whatIsPlatform
+            whatIsCatchable | whatIsGround | whatIsPlatform
         );
         #endregion
 
-        #region Iniciar Funcao
+        #region Iniciar Função
         move();
         #endregion
 
         #region Flip
         if (isGround == false || isWall == true)
         {
-            if (OlhandoDireita)
+            if (lookingRight)
             {
                 transform.localRotation = Quaternion.Euler(0, 180, 0);
-                OlhandoDireita = false;
+                lookingRight = false;
             }
             else
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
-                OlhandoDireita = true;
+                lookingRight = true;
             }
         }
         #endregion
     }
 
-    private void move() // Responsavel pela movimentação
+    private void move() // Responsável pela movimentação
     {
-        rb.velocity = transform.right * speed;
+        Vector2 movement = transform.right * speed;
+
+        rb.MovePosition(rb.position + movement * Time.deltaTime);
     }
 
     private void OnDrawGizmosSelected()
     {
-        // Desenhar range do sensor do chao
+        // Desenhar range do sensor do chão
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(gorundCheck.transform.position, rangeGroundCheck);
+        Gizmos.DrawWireSphere(groundCheck.transform.position, rangeGroundCheck);
 
         // Desenhar range do sensor da parede
         Gizmos.color = Color.red;
