@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 210737247}
   - component: {fileID: 210737246}
   - component: {fileID: 210737245}
+  - component: {fileID: 210737248}
   m_Layer: 0
   m_Name: Enemy Tiktik
   m_TagString: Untagged
@@ -275,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210737241}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.95, y: 3.01, z: 0}
+  m_LocalPosition: {x: 6.04, y: 3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -348,23 +349,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6234d3a94fd4fc41aa6c46fe39ffcc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatIsObstacle1:
+  whatIsObstacle0:
     serializedVersion: 2
     m_Bits: 8
+  whatIsObstacle1:
+    serializedVersion: 2
+    m_Bits: 4096
   whatIsObstacle2:
     serializedVersion: 2
     m_Bits: 64
-  whatIsObstacle3:
-    serializedVersion: 2
-    m_Bits: 4096
   wallCheck: {fileID: 228872583}
   groundCheck: {fileID: 2103860149}
   rangeGroundCheck: 0.2
   rangeWallCheck: 0.2
   speed: 1
-  isGroud: 1
-  isWall: 0
-  inRotation: 0
   holdPosition: {x: 0, y: 0}
   ZAxis: 0
 --- !u!50 &210737246
@@ -386,7 +384,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &210737247
 BoxCollider2D:
@@ -414,6 +412,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &210737248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210737241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082530d4cd56dea49b96f38bbb100c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 2
+  whatHurtsMe:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 20
+  invulnerabilityDuration: 1
 --- !u!1 &228872583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1682,8 +1698,8 @@ MonoBehaviour:
   rangeGroundCheck: 0.19
   rangeWallCheck: 0.4
   wallCheck: {fileID: 529305370}
-  gorundCheck: {fileID: 323598920}
-  whatisGround:
+  groundCheck: {fileID: 323598920}
+  whatIsGround:
     serializedVersion: 2
     m_Bits: 8
   whatIsCatchable:
@@ -1693,7 +1709,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   speed: 2
-  OlhandoDireita: 1
+  lookingRight: 1
 --- !u!50 &1686979662
 Rigidbody2D:
   serializedVersion: 4
@@ -1711,9 +1727,9 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1686979663
 BoxCollider2D:
@@ -1822,11 +1838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082530d4cd56dea49b96f38bbb100c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 4
+  life: 2
   whatHurtsMe:
     serializedVersion: 2
     m_Bits: 128
-  recovery: 0
+  knockbackForce: 25
+  invulnerabilityDuration: 1
 --- !u!4 &1700194727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6756815387574058263, guid: b06a9a43a5eb24440a71c58acae84b6b, type: 3}
@@ -4110,6 +4127,7 @@ GameObject:
   - component: {fileID: 1895811658}
   - component: {fileID: 1895811657}
   - component: {fileID: 1895811656}
+  - component: {fileID: 1895811661}
   m_Layer: 0
   m_Name: EnemyFly
   m_TagString: Untagged
@@ -4166,7 +4184,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &1895811658
 BoxCollider2D:
@@ -4264,6 +4282,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895811661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895811655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082530d4cd56dea49b96f38bbb100c47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  whatHurtsMe:
+    serializedVersion: 2
+    m_Bits: 128
+  knockbackForce: 20
+  invulnerabilityDuration: 1
 --- !u!4 &1905764657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6756815387574058263, guid: b06a9a43a5eb24440a71c58acae84b6b, type: 3}
