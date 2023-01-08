@@ -12,7 +12,7 @@ public class dialogue : MonoBehaviour
 
     private void Update() 
     {
-        if(Input.GetKeyDown("k") && IsInRange())
+        if(Input.GetKeyDown("k") && IsInRange() && dialogueManager.escrevendo == false)
         {
             dialogueManager.dialogLines = dialogLines;
             dialogueManager.whoTalking = whoTalking;
