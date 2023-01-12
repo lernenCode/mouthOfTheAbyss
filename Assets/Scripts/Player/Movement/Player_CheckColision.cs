@@ -18,16 +18,21 @@ public class Player_CheckColision : MonoBehaviour
     public static bool isWallRight;
     public static bool isWallLeft;
 
+    [Header("Npc")]
+    public static bool inNpcRange;
+
     [Header("Em comun")]
     [SerializeField] private LayerMask whatisGround;
     [SerializeField] private LayerMask whatIsCatchable;
     [SerializeField] private LayerMask whatIsPlatform;
+    [SerializeField] private LayerMask whatIsNPC;
     [SerializeField] private BoxCollider2D boxCol2D;
-
-    #region CheckGround
 
     private void Update()
     {
+        // Npc
+        inNpcRange = npcTalkRange();
+
         // Ground
         isGround = isGrounded();   
 
@@ -43,6 +48,8 @@ public class Player_CheckColision : MonoBehaviour
         if(isPlatformedRight() || isPlatformedLeft() || isPlatformed()) {isPlatform = true;} else {isPlatform = false;}
         if(isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
     }
+
+    #region CheckGround
     private bool isGrounded()
     {
         RaycastHit2D isGround = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatisGround | whatIsCatchable);
@@ -50,7 +57,20 @@ public class Player_CheckColision : MonoBehaviour
     }
     #endregion
 
+
+    
+    #region CheckNPC
+
+    private bool npcTalkRange()
+    {
+        RaycastHit2D isNpc = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.zero, 0.1f, whatIsNPC);
+        return isNpc.collider != null;
+    }
+    #endregion
+
+
     #region CheckWall
+
     private bool isWalledLeft()
     {
         RaycastHit2D isWallLeft = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatisGround | whatIsCatchable);

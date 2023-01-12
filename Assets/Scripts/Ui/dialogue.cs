@@ -24,6 +24,15 @@ public class dialogue : MonoBehaviour
             if (dialogueManager.isActive && dialogueManager.escrevendo == false)
             { StartCoroutine(dialogueManager.TypeText()); }
         }
+
+        if (Player_CheckColision.inNpcRange == false)
+        {
+            dialogueManager.dialogText.text = "";
+            dialogueManager.dialogLines = null;
+            dialogueManager.whoTalking = null;
+            dialogueManager.isActive = false;
+            dialogueManager.currentLine = 0;
+        }
     }
 
     private bool IsInRange()
