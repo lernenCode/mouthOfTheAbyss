@@ -6,9 +6,7 @@ public class enemyPatrolGrab : MonoBehaviour
 {
    // Utilizaremos apenas uma LayerMask para verificar a colisão
    [Header("Sensor")]
-   public LayerMask whatIsObstacle0;
-   public LayerMask whatIsObstacle1;
-   public LayerMask whatIsObstacle2;
+   public LayerMask whatIsObstacle;
    public GameObject wallCheck;
    public GameObject groundCheck;
    public float rangeGroundCheck;
@@ -24,13 +22,20 @@ public class enemyPatrolGrab : MonoBehaviour
 
    [Header("Componentes")]
    private Rigidbody2D rb;
+   private BoxCollider2D boxCollider;
 
    // Utilizaremos constantes para facilitar a manutenção do código
    private const float ROTACAO_PADRAO = 90f;
    private const float ROTACAO_MINIMA = -360f;
    private const float ROTACAO_MAXIMA = 360f;
 
-   private void Start() { rb = GetComponent<Rigidbody2D>();}
+   private void Start() 
+   { 
+        rb = GetComponent<Rigidbody2D>(); 
+        boxCollider = GetComponent<BoxCollider2D>();
+        // Ignorar minha colisão
+        Physics2D.IgnoreCollision(boxCollider, boxCollider, true);
+    }
 
    private void Update() 
    {
@@ -75,13 +80,13 @@ public class enemyPatrolGrab : MonoBehaviour
    private bool VerificarColisaoChao()
    {
         // Identificar colisão com o chao
-        return Physics2D.OverlapCircle(groundCheck.transform.position, rangeGroundCheck, whatIsObstacle0 | whatIsObstacle1 | whatIsObstacle2);
+        return Physics2D.OverlapCircle(groundCheck.transform.position, rangeGroundCheck, whatIsObstacle);
    }
 
    private bool VerificarColisaoParede()
    {
         // Identificar colisão com a parede
-        return Physics2D.OverlapCircle(wallCheck.transform.position, rangeWallCheck, whatIsObstacle0 | whatIsObstacle1 | whatIsObstacle2);
+        return Physics2D.OverlapCircle(wallCheck.transform.position, rangeWallCheck, whatIsObstacle);
    }
 
     private void AtualizarPosicaoAposRotacao()

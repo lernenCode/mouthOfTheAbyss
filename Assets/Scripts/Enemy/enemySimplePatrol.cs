@@ -23,12 +23,6 @@ public class enemySimplePatrol : MonoBehaviour
     [SerializeField]
     private LayerMask whatIsGround;
 
-    [SerializeField]
-    private LayerMask whatIsCatchable;
-
-    [SerializeField]
-    private LayerMask whatIsPlatform;
-
     [Header("Componentes")]
     private BoxCollider2D boxCollider;
     private Rigidbody2D rb;
@@ -54,14 +48,14 @@ public class enemySimplePatrol : MonoBehaviour
         isGround = Physics2D.OverlapCircle(
             groundCheck.transform.position,
             rangeGroundCheck,
-            whatIsCatchable | whatIsGround | whatIsPlatform
+            whatIsGround
         );
 
         // Identificar colisão com a parede
         isWall = Physics2D.OverlapCircle(
             wallCheck.transform.position,
             rangeWallCheck,
-            whatIsCatchable | whatIsGround | whatIsPlatform
+            whatIsGround
         );
         #endregion
 

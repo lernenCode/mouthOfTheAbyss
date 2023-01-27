@@ -15,11 +15,7 @@ public class ColliderInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        IsTouching = Physics2D.IsTouchingLayers(col, interaction);
-        
-
-        if(IsTouching)
+        if(Physics2D.IsTouchingLayers(col, interaction))
         {
             if(Player_Carried.Throwablefinished)
             {

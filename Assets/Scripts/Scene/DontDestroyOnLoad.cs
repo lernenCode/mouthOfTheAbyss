@@ -7,12 +7,9 @@ public class DontDestroyOnLoad : MonoBehaviour
 {
     [SerializeField] private int faseParaCarregar;
     [SerializeField] private GameObject PersistentScene;
-    void OnTriggerEnter2D(Collider2D hit) 
+    private void Start() 
     {
-        if(hit.tag == "Player")
-        {
-            SceneManager.LoadScene(faseParaCarregar);
-            DontDestroyOnLoad(PersistentScene);
-        }
+        SceneManager.LoadScene(faseParaCarregar);
+        DontDestroyOnLoad(PersistentScene);
     }
 }

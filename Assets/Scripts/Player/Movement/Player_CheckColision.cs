@@ -56,8 +56,6 @@ public class Player_CheckColision : MonoBehaviour
         return isGround.collider != null;
     }
     #endregion
-
-
     
     #region CheckNPC
 

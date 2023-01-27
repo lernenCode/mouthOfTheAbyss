@@ -40,7 +40,8 @@ public class Player_Move : MonoBehaviour
             }
 
             // Parar movimento
-            else if (Player_Dash.runningDash == false && RopeDraw.InputRope == false && Player_WallMove.isJumpWall == false)
+            else if (Player_Dash.runningDash == false && RopeDraw.InputRope == false 
+            && Player_WallMove.isJumpWall == false && playerDamage.isDamage == false)
             {
                 if(Player_CheckColision.isGround == true || Player_CheckColision.isPlatformGrounded == true) // se tiver no chao ou plataform
                 { Player_Physics2D.corpoDoPersonagem.velocity = new Vector2(0, Player_Physics2D.corpoDoPersonagem.velocity.y);}

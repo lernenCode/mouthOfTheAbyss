@@ -13,6 +13,7 @@ public class enemyDamage : MonoBehaviour
     private bool iHurt, canTakeDamage = true;
     private Vector2 lastImpactPoint;
     private float invulnerabilityTimer;
+    private   RaycastHit2D touchedHurts;
 
     void Start()
     { 
@@ -46,7 +47,7 @@ public class enemyDamage : MonoBehaviour
 
         foreach (Vector2 direction in directions)
         {
-            RaycastHit2D touchedHurts =  Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, direction, 0.1f, whatHurtsMe);
+            touchedHurts =  Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, direction, 0.1f, whatHurtsMe);
             if (touchedHurts.collider != null)
             {
                 return true;
@@ -64,6 +65,9 @@ public class enemyDamage : MonoBehaviour
 
     private void Damage()
     {
+        // Destruir objeto que me deu dano
+        Destroy(touchedHurts.collider.gameObject);
+        // criar particula
         life--;
         lastImpactPoint = transform.position;
         knockback();

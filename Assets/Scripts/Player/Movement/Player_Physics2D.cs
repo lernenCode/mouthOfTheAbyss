@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Physics2D : MonoBehaviour
 {
     public static Rigidbody2D corpoDoPersonagem;
+     public static BoxCollider2D boxCol;
     public static GameObject playerGameObject;
     [SerializeField] private GameObject player;
     
@@ -35,6 +36,7 @@ public class Player_Physics2D : MonoBehaviour
     {
         corpoDoPersonagem = GetComponent<Rigidbody2D>();
         playerGameObject = player;
+        boxCol = GetComponent<BoxCollider2D>();
     }
 
     public static void ResetVelocity()
