@@ -1212,9 +1212,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf837ed53be1aa4b96f0b0f9c64a181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogTextReal: {fileID: 1109306475}
-  typingDelayReal: 0.05
-  dialogBox: {fileID: 600629960}
+  _dialogText: {fileID: 1109306475}
+  _dialogBox: {fileID: 600629960}
 --- !u!95 &557519970
 Animator:
   serializedVersion: 4

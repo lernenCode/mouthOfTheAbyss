@@ -1,28 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class dialogue : MonoBehaviour
 {
     [SerializeField] private string[] dialogLines;
-    [SerializeField] private  Image whoTalking;
+    [SerializeField] private Image whoTalking;
     [SerializeField] private float rangeTalk;
     [SerializeField] private LayerMask Player;
 
-    private void Update() 
+    private void Update()
     {
-        if(Input.GetKeyDown("k") && IsInRange() && dialogueManager.escrevendo == false)
+        if (Input.GetKeyDown("k") && IsInRange())
         {
             dialogueManager.dialogLines = dialogLines;
             dialogueManager.whoTalking = whoTalking;
 
-            if(dialogueManager.currentLine == 0 
+            if (dialogueManager.currentLine == 0
             || dialogueManager.currentLine == dialogueManager.dialogLines.Length)
-            {dialogueManager.isActive = !dialogueManager.isActive;}
+            { dialogueManager.isActive = !dialogueManager.isActive; }
 
-            if (dialogueManager.isActive && dialogueManager.escrevendo == false)
-            { StartCoroutine(dialogueManager.TypeText()); }
+            if (dialogueManager.isActive && !dialogueManager.waitForInput)
+            { dialogueManager.TypeText(); }
         }
 
         if (Player_CheckColision.inNpcRange == false)
@@ -36,12 +34,12 @@ public class dialogue : MonoBehaviour
     }
 
     private bool IsInRange()
-    {return Physics2D.OverlapCircle(transform.position, rangeTalk, Player);}
+    { return Physics2D.OverlapCircle(transform.position, rangeTalk, Player); }
 
-    private void OnDrawGizmosSelected() 
-   {
+    private void OnDrawGizmosSelected()
+    {
         // Desenhar range
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, rangeTalk);
-   }
+    }
 }

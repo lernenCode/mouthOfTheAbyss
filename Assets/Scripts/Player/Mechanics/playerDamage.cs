@@ -36,7 +36,10 @@ public class playerDamage : MonoBehaviour
     public IEnumerator recovery()
     {
         isDamage = true;
+        Player_Input.canMove =  false;
         playerKnockback.knocback(damage, transform.position);
+        yield return new WaitForSeconds(_recoveryTime);
+        Player_Input.canMove =  true;
         yield return new WaitForSeconds(_recoveryTime);
         isDamage = false;
     }
