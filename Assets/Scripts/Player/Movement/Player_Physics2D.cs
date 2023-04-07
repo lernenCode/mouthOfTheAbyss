@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Physics2D : MonoBehaviour
 {
     public static Rigidbody2D corpoDoPersonagem;
-     public static BoxCollider2D boxCol;
+    public static BoxCollider2D boxCol;
     public static GameObject playerGameObject;
     [SerializeField] private GameObject player;
     

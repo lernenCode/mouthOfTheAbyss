@@ -52,7 +52,7 @@ public class Player_CheckColision : MonoBehaviour
     #region CheckGround
     private bool isGrounded()
     {
-        RaycastHit2D isGround = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatisGround | whatIsCatchable);
+        RaycastHit2D isGround = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatisGround | whatIsCatchable | whatIsPlatform);
         return isGround.collider != null;
     }
     #endregion
@@ -71,13 +71,13 @@ public class Player_CheckColision : MonoBehaviour
 
     private bool isWalledLeft()
     {
-        RaycastHit2D isWallLeft = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatisGround | whatIsCatchable);
+        RaycastHit2D isWallLeft = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatisGround | whatIsCatchable | whatIsPlatform);
         return isWallLeft.collider != null;
     }
 
     private bool isWalledRight()
     {
-        RaycastHit2D isWallRight = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatisGround | whatIsCatchable);
+        RaycastHit2D isWallRight = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatisGround | whatIsCatchable | whatIsPlatform);
         return isWallRight.collider != null;
     }
     #endregion
