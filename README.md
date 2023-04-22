@@ -1,6 +1,18 @@
+<h1 align="center">🌉 Na beira do Abismo 🌉</h1>
+
 ![gamedev](https://user-images.githubusercontent.com/96671069/233741945-fb822b91-b725-4ec2-84d5-e8821ade8a68.png)
-# 🌉 Na beira do Abismo 🌉
+
+## ✨ Introdução
 Bem-vindo ao jogo "Beira do Abismo"! Este é um jogo de plataforma em pixels, desenvolvido na Unity em C#, que se trata de uma aventura emocionante em um mundo fantástico. O objetivo do jogo é explorar o abismo, enfrentar criaturas perigosas e descobrir a verdadeira natureza da maldição que assola a cidade de Beira do Abismo.
+
+## Índice
+- [Introdução](#-introdução)
+- [História](#história--)
+- [Jogabilidade](#jogabilidade--)
+- [Características](#características-)
+- [Licença](#%EF%B8%8F-licença)
+- [Contribuindo](#-contribuindo)
+- [Agradecimentos](#agradecimentos-)
 
 ## História  📖
 A cidade de Beira do Abismo é uma comunidade que depende da exploração da fenda profunda no chão para sua economia. Porém, a extração dos minérios e plantas medicinais se tornou cada vez mais difícil devido às criaturas perigosas que habitam o abismo. Muitos exploradores não retornam e há rumores de que há uma maldição no abismo, pois muitos que vão lá embaixo acabam adoecendo e morrendo. O governo decide enviar uma equipe de robôs para descobrir a causa da maldição e encontrar uma cura.
