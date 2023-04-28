@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9b51623a8877db24487f79433396a2ad
+guid: 619941cd9eb8130458c49742b9b46ebb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,1933 +104,2374 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SupportIddle0
+      name: SupIdle_CharacterRobot_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 216
-        width: 24
-        height: 24
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52e1248f0fe022a47b20f3d8424c023a
-      internalID: 548746054
+      spriteID: 4782d422be061c74081f8ca7235270a7
+      internalID: -693932971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SupportIddle1
+      name: SupIdle_CharacterRobot_1
       rect:
         serializedVersion: 2
-        x: 24
-        y: 216
-        width: 24
-        height: 24
+        x: 65
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 775023e535814404380b3f3c32347552
-      internalID: -1433891172
+      spriteID: 41541451312a30146b025af2ab21b7b6
+      internalID: -1291339965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SupportIddle2
+      name: SupIdle_CharacterRobot_2
       rect:
         serializedVersion: 2
-        x: 48
-        y: 216
-        width: 24
-        height: 24
+        x: 128
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96399bb41207a7a429c039acc7eba31f
-      internalID: -509388286
+      spriteID: 0bf4068214961ee46871b8f8325e1732
+      internalID: 223369500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SupportIddle3
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d7d2663aeda6d54c963718b8a2d83b2
-      internalID: -972333367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SupportDie0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5bb24efcd349e541b53ecba5393017d
-      internalID: -946823378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SupportDie1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ebb53997cfcd0e04b8f8cbf47ead1b79
-      internalID: -793992414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SupportDie2
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f83fa36dc3abdd4b9fb252596deeca5
-      internalID: -1812135304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdle0
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 216
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae259687803de9e4591630a3e1c4a798
-      internalID: -192872299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdle1
+      name: SupIdle_CharacterRobot_3
       rect:
         serializedVersion: 2
         x: 192
-        y: 216
-        width: 24
-        height: 24
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7c4da88f318584469428db54fe3194e
-      internalID: 1994969273
+      spriteID: da694de28f743164ca61880b057218de
+      internalID: 56674893
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle2
+      name: SupIdle_CharacterRobot_4
       rect:
         serializedVersion: 2
-        x: 216
-        y: 216
-        width: 24
-        height: 24
+        x: 256
+        y: 1536
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e454a994f8472b4784d1507fd027d40
-      internalID: -998993919
+      spriteID: 296d5c25479ad374d994d70f04fd2898
+      internalID: 1556755615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterIdle3
+      name: SupDeath_CharacterRobot_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f74e3e623d9de4abc640b497b071fa
+      internalID: -1063447359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupDeath_CharacterRobot_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bff6040250a956409bf97741a58de2b
+      internalID: -740734389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupDeath_CharacterRobot_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1472
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd0164e6509ce641b7f2226a24d3018
+      internalID: 230600975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_CharacterRobot_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438ffaec4852ce541a67aa4d287da7d8
+      internalID: -13850097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_CharacterRobot_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390c148702eae3a46975b095dc616b60
+      internalID: -868768876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_CharacterRobot_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613267bcc42e5584bb71b3f6ecc7b080
+      internalID: -1249453805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_CharacterRobot_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d4a54290c3c8641b4f9f8e958c3f1c
+      internalID: -906090155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Attack_CharacterRobot_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1408
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9749f4ae19625214ebd9c9f2cad8bb8f
+      internalID: 417177086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iddle_CharacterRobot_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cdb826a4de7c49488f7796e7879f601
+      internalID: -1948733304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iddle_CharacterRobot_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b34c0752af231e428ba17164adaaaac
+      internalID: 1410908641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iddle_CharacterRobot_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb78d94e6f7ac347994d5fd39330e07
+      internalID: -1026493679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Iddle_CharacterRobot_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1344
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 772dffc8a309e994190869354c89da6a
+      internalID: -463863496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ed97de17ab0074395cea215c77a5b7
+      internalID: -595331660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e559c0fb3f620409e2d1825661ad64
+      internalID: -458629119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ae5fb6795a49344ab86b7555297a99
+      internalID: 1357548267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_20
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1281
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03baafff9dce4c64eacbc326a0145ab1
+      internalID: 484446709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef79e809e1948643b505e44387ae23c
+      internalID: 938134543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrabWall_CharacterRobot_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1280
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2b9c4b56fd582449d33a6bfa853490
+      internalID: -58130812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlideWall_CharacterRobot_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2931ad24512db0b4da2b4ba349aae006
+      internalID: -898968494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlideWall_CharacterRobot_24
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8b2b358705879439c5d50fb6f65c2d
+      internalID: -1519476896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlideWall_CharacterRobot_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adce40a4c0f20fc41805d98d04d2bbff
+      internalID: 1785853083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlideWall_CharacterRobot_26
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66e14c7a6f92f34aa45002067a702e4
+      internalID: -643883291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlideWall_CharacterRobot_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1216
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9836b54272ff7984ca1f587407fc26e9
+      internalID: -2010102082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11055565bfa8c8f4daed475413738e14
+      internalID: -16869802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57457a1755bae594293060f65edbf00b
+      internalID: 777509739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539c18a12b77a5541a6dbb602481938b
+      internalID: 1443233932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97ddbb04e909ff42aa47ba93f6f9180
+      internalID: 1827072970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bbd0856f1e8ee44b9d67c69fd5356c
+      internalID: 1889528636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4681c64b58b862a448af073b4e5a44e7
+      internalID: -1858379295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_34
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e28a1949b634646baebe165c80fcc6
+      internalID: 105325090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Walk_CharacterRobot_35
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1152
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c99a0e6d215a9e4ca8bf14b9bb9e731
+      internalID: -1557978947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_CharacterRobot_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f556eda98ad0b5448f5a8595eeb6dac
+      internalID: 235631113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_CharacterRobot_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a623f9cf09ceb43a3c04921df7d47b
+      internalID: 2012570364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jump_CharacterRobot_38
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1088
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9908dfba9c28d244a94a1a41e13dd6a9
+      internalID: -897248048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt_CharacterRobot_39
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a871ee580e5a24742a6852f833590984
+      internalID: -1066604597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt_CharacterRobot_40
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac1e7be7dbbb8b478653dc420d1c80f
+      internalID: -1453699823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hurt_CharacterRobot_41
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1616c54b04c06164a8b1c9c15e6c7c52
+      internalID: -653289470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpCarry_CharacterRobot_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a056e52efbb3b40bdc9771136e9850
+      internalID: 683905562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpCarry_CharacterRobot_43
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2127a5cc3c1a2b14fb996b9ce664001e
+      internalID: 1747199308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: JumpCarry_CharacterRobot_44
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 960
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c97b114e1046c04cbc35b0a7a4444d9
+      internalID: 1419299093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallCarry_CharacterRobot_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159e5717de9cbac499fdf9bf55a2d474
+      internalID: 22404288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FallCarry_CharacterRobot_46
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a0b868062089a42af17bfa1ae724cc
+      internalID: -1342288248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_CharacterRobot_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff84eb661ea123844a78fb0380f55c7f
+      internalID: -1103220610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_CharacterRobot_48
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 832
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 880f00e63a31c4c4887f1be1ca19388b
+      internalID: 741454647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carry_CharacterRobot_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12cc4ae05c01baa41b1cba97a71f4304
+      internalID: -719205409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carry_CharacterRobot_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e736ff9f0e499b4ba2ebfa57555084a
+      internalID: -274736114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carry_CharacterRobot_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f6edcd7ad8d2e43b28621c7c4f7c7d
+      internalID: 1437449912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carry_CharacterRobot_52
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 768
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b05bd48c93a5f4eb8b9f3d1178928f
+      internalID: 1936064371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34c47bebe1f4b248ab8842ee7487e8b
+      internalID: 714050167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_54
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1594d450a9682d649b881c4668e06094
+      internalID: -1863939204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_55
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26c065190d72e549990bdb37ed0d5bf
+      internalID: 1554023906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfb5e3dd7fdedf438fbf90f0498a422
+      internalID: -1545876591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_57
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97828de6da8adc4895928bcb86139d8
+      internalID: 74679554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_58
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77941717e85ce3c4dad26d23a3c8d2a9
+      internalID: -343872186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_59
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4648c97acfde304a8c939bc2d4b305e
+      internalID: -1077957347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_60
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1532ad48d29cb7549aedcc61f1a8ac1a
+      internalID: 1561087770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkCarry_CharacterRobot_61
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 704
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c83d40b08a9e744a84a37dff981e48
+      internalID: -487835543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87186836bcbebf04ea81c72e2b9ed417
+      internalID: -46750217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_63
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3e2ed3eaa7871468e27716479c9d67
+      internalID: -1369211958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_64
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f18f780a218804b99f5f3199ba15d7
+      internalID: -746165230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_65
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b2696ac0a0a284b9b5aeac0539efc9
+      internalID: -324619452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_66
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5580451f77e7700489105006267d2e3f
+      internalID: 1847468828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DeathCarry_CharacterRobot_67
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 640
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a361afd691cf6b44785fe23202de76c3
+      internalID: -1316687640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c858a88785d286409a542553c77f4b4
+      internalID: 739726680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e003f4d3d1744bb1c43dd8316ca17
+      internalID: 1151196003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_70
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ede0286da367347b95a5de991a7471
+      internalID: 1944261215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_71
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab6a42ef0c6b0145aff2df5c54431b2
+      internalID: -1746387509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_72
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aea7d843052e134c842d6b0a8656bdc
+      internalID: 1195054738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_CharacterRobot_73
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 576
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f52e57403f9106e43af3de36043124d9
+      internalID: 820715879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2caa1053862fb2c4fb3b016bc625afbb
+      internalID: 1611881949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_75
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ee93f6d3041e64a8ca8e74d0777182
+      internalID: -1811306969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_76
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a52b110a97692949977bf6eb3bad309
+      internalID: -1591598703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_77
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee681326372bceb4098b9c954592554d
+      internalID: -1084125783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_78
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1930492fcf5fc34fbce06935012c5a0
+      internalID: 463242226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookUp_CharacterRobot_79
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 512
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3333736b7cbf04f47814a99fed9abb9a
+      internalID: 1758755957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrabUp_CharacterRobot_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0e7285f6066054a9e7f37f92e37c37
+      internalID: -385676252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrabUp_CharacterRobot_81
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab9c9bb1f0440e45bc00011113bd8e1
+      internalID: 1817631700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrabUp_CharacterRobot_82
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7472740fda7f84e83b0467d8f0af16
+      internalID: -1562870765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrabUp_CharacterRobot_83
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ae42c5afe5de946bed4aeb77d6e499
+      internalID: -994859323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1781fec69997e443864d6097dc4c6f5
+      internalID: -111306966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ca2aaa971bf7242b54c333c290819a
+      internalID: 1575665546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_86
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656a9dc443ec7d043a4a1a6a3fce1fbc
+      internalID: -86598466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_87
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9327a4c5a8fe14643a121ea149355f19
+      internalID: -500145772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_88
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee186728f0f555c4780d82d9c9192ffd
+      internalID: 2022579398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hook_CharacterRobot_89
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc173c4342787d742b0cd8cdba433a5c
+      internalID: 1121640372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrab_CharacterRobot_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c6532d1f8c08b42b429f12287bd5ac
+      internalID: 1881566058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrab_CharacterRobot_91
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cbed5b699e60e8428ca4f4e7bdfb518
+      internalID: 491391428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrab_CharacterRobot_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dcceced4f735b43b9716efa75f23fe
+      internalID: 484576850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrab_CharacterRobot_93
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7201120588c9fea4fa9c64a8451378a8
+      internalID: -669092276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HookGrab_CharacterRobot_94
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71426d53187d2ef48970894e3742bb06
+      internalID: -402462207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_CharacterRobot_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ab33a6ff7ea144caf75598840cdd0d
+      internalID: -929143158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_CharacterRobot_96
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346c6fe5148168e47aa8bd47f4989d04
+      internalID: 1338261242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_CharacterRobot_97
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a4c49934621b8479d80cee71db990b
+      internalID: -61909748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_CharacterRobot_98
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c97c203d9313d649a6d75fd2f4528be
+      internalID: -385397000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dash_CharacterRobot_99
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dec0bf46b4bf5344ac739fdf673acf7
+      internalID: 1000617107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Throw_CharacterRobot_100
       rect:
         serializedVersion: 2
         x: 0
         y: 192
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a372ad7e20adaa44392d11c71eff40ce
-      internalID: 1878485798
+      spriteID: c71a4a4ef6e294b468b94e9b6ff35317
+      internalID: 83805883
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterRobot_11
+      name: Throw_CharacterRobot_101
       rect:
         serializedVersion: 2
-        x: 24
+        x: 64
         y: 192
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755c40bb6d246da4285ad39e58ba8729
-      internalID: 1103720538
+      spriteID: 142ad27aa9905a84c999c173aac13cdf
+      internalID: -1907434463
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterGrabWall0
+      name: Throw_CharacterRobot_102
       rect:
         serializedVersion: 2
-        x: 48
+        x: 128
         y: 192
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54a6ac1fe73497444bd96cf397567f1c
-      internalID: -314422174
+      spriteID: e47aff4aa341c684898179ba1587151c
+      internalID: -1136285019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterGrabWall1
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bb9550e3d295f349a49c3f1bcbde416
-      internalID: -1200452111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterGrabWall2
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4248b7170ab6c884fbce99f9b1559ce0
-      internalID: 1108358404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterGrabWall3
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a073e90f94cece46b59b658393fd22a
-      internalID: 1214925162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterGrabWall4
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 937f25a2f02df1e44a04150174df17ad
-      internalID: 31874377
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterGrabWall5
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81518c102f27664439be0ef53e6a35fe
-      internalID: -2084768514
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_18
+      name: Throw_CharacterRobot_103
       rect:
         serializedVersion: 2
         x: 192
         y: 192
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31414092cea0d354ebc8abfa3e1c2ca4
-      internalID: -1503194610
+      spriteID: cdcd04aa28ae50d4d9b39af7d2511d92
+      internalID: 67639906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterSliceWall0
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 192
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c9cc7d50f677ecb459e67381468b230e
-      internalID: 1263137646
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterSliceWall1
+      name: Lift_CharacterRobot_104
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
-        width: 24
-        height: 24
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86015a6c4938c1d49a5e9abcdeb0fe41
-      internalID: -210891860
+      spriteID: 07e6b0f4e270612438aec38c15f2cb15
+      internalID: 128047632
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterSliceWall2
+      name: Lift_CharacterRobot_105
       rect:
         serializedVersion: 2
-        x: 24
-        y: 168
-        width: 24
-        height: 24
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e545b1ae1ec1f4347ba6370d7990a975
-      internalID: 1045271243
+      spriteID: 7ced8942c4524bf48a7b110266c8b9ae
+      internalID: 1403213057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterSliceWall3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18228d05fc03727478d096f9fbdd852e
-      internalID: 387633798
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterSliceWall4
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abe009896ab7eda4ea553e3fe0c6e99a
-      internalID: 224457836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_24
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a3ba4ec8fb7de240a71d67dd899d5c3
-      internalID: 1933230783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk0
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1a0607756b4db44abb77a6b66e6edae
-      internalID: 1349891291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk1
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92a748e9b136f6e4b808a7a4e03abc06
-      internalID: -1196552169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk2
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dccbfc14d12a0941bc806e78bb44bd1
-      internalID: 695379887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a2c97ef8fb28a943903feef5c5f3c45
-      internalID: -232396308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk4
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 168
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec376fb5d1925da468ed415363f29350
-      internalID: -1716985885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalk5
+      name: Lower_CharacterRobot_106
       rect:
         serializedVersion: 2
         x: 0
-        y: 144
-        width: 24
-        height: 24
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41bf3442cbd33654ca597a246f3a1c49
-      internalID: 1388237970
+      spriteID: 97e0e2858b32b1544923e229a8198263
+      internalID: 1799826563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterWalk6
+      name: Lower_CharacterRobot_107
       rect:
         serializedVersion: 2
-        x: 24
-        y: 144
-        width: 24
-        height: 24
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d84b6bc206f111640919d9ce28e328bf
-      internalID: -786836253
+      spriteID: dae73d7627a0fc84fb571c64ae78ce3b
+      internalID: 1953624106
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterWalk7
+      name: Lower_CharacterRobot_108
       rect:
         serializedVersion: 2
-        x: 48
-        y: 144
-        width: 24
-        height: 24
+        x: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7494fa6f43ea194a8bce0d146e08700
-      internalID: -1953939414
+      spriteID: 87e8a8c7576025f48b46ded802d573ff
+      internalID: -1312512931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterRobot_33
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd974bb42d55b1c449dc43ceae258104
-      internalID: 2031150003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJump0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 177341ccb4043ae42bc3ca24989f5a94
-      internalID: -1716027307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJump1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bcb3d59a69da35340b34213b374d8f75
-      internalID: -620046910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJump2
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b42879e8a42213047bc1e9023c39fbf4
-      internalID: 1035835965
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHurt0
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 144
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 935d1bcda2b8a814ab83b56aa8bb5d67
-      internalID: -2042212369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHurt1
+      name: Lower_CharacterRobot_109
       rect:
         serializedVersion: 2
         x: 192
-        y: 144
-        width: 24
-        height: 24
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b29ae0c097ffde2458ad2b7dc9ea3a54
-      internalID: -126014333
+      spriteID: da2a38bd31d35b04d9f5385bb497299d
+      internalID: -118173432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterHurt2
+      name: Lower_CharacterRobot_110
       rect:
         serializedVersion: 2
-        x: 216
-        y: 144
-        width: 24
-        height: 24
+        x: 256
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2919a742b8a1dec478186e383e0e6a27
-      internalID: -887631743
+      spriteID: 2339acb6aabe77843b55721f5e4339c6
+      internalID: 1177116306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterRobot_40
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb93ab9ee2ecaba44a952941afcf88c0
-      internalID: 1413516070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpChage0
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea6f28b0660a9ae4aa3ec15ec6c89ffb
-      internalID: 323140606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpChage1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edfb88af018532841a7c6a17dd99aa38
-      internalID: -371076178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpChage2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbe58928d568f1c48a5ba354131d4aed
-      internalID: 1439768861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpChageFall0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c84ba7c3f8f5a34bb2e6d6c15ee88e6
-      internalID: 2043976104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpChageFall1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 218fe7377e23f194789d8cbc3c548dee
-      internalID: 456843285
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpFall0
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf20ae687ea195841847ac53cde7fc97
-      internalID: -1818199670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterJumpFall1
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10cc4a7e43bc5bc4583b8c21ad1a8357
-      internalID: -1635158470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_48
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed9bfcf570830cd43bf0f0c75d3cd454
-      internalID: -1861474637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdleCharge0
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 120
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7ebc7fa0eda21d45bbad6f21ee59a56
-      internalID: 2065708367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdleCharge1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 521abe6555db5ac4aa17547095affa5f
-      internalID: -1595252241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdleCharge2
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0898f7180bfd5124b95f23ff12c77cd2
-      internalID: 76244814
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterIdleCharge3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6e19e5fa90fa804a86ec6d48f446311
-      internalID: 2085171756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_53
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da5e6525774bf8248a7aa701de59bc58
-      internalID: 1811178459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65101c621c12c1440a0bd25e1e469c64
-      internalID: -745665290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7962f0776ff8af2488b72b55d4678971
-      internalID: -485995600
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge2
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 041c4b6cc8c9130439436408e272942a
-      internalID: 256457261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge3
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de55130c1350903409ff4940633441e8
-      internalID: -40542178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1ade1487b8d94d45ac1f59b3def1f81
-      internalID: -1529454815
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge5
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 96
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3cc653e714c21c41977808e4d8d925c
-      internalID: -832517295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d4b76bb6d040cc43bb4c3172a666ae2
-      internalID: 431412206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge7
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bba7fc26001d7c746af75b54dfa16b18
-      internalID: 67028652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterWalkCharge8
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b217d54c1dd8cd4fbb28066cfb00926
-      internalID: -1904874878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_63
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60725fe857f8b014d87bcd2134ccf6fa
-      internalID: 1911618569
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge0
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 406459e25c0a4e847801ca29d7e02501
-      internalID: -1478541169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e82f2bc357d92c428dc25545f761d33
-      internalID: 568768048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge2
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00038beca41fe594e90db48e29a4f57c
-      internalID: 1354611518
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge3
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4b8600bb580565489831bcee6c6e552
-      internalID: 1391567731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge4
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02dc6867d1f73cb47bcc11d2a1dc736b
-      internalID: -1128643892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDeadCharge5
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 72
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd133895f15734d41beb8a366a8397be
-      internalID: 1691330651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_70
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93a60936369d6e844a73df674aa232e5
-      internalID: -1505145018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead0
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c406636b1cf0d3f449dde604526068b8
-      internalID: -996461012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead1
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: afd88e93af510e34b903396873afab26
-      internalID: 990779680
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead2
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa35373d16d34dc4f8a761a0d9392c29
-      internalID: 997382485
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7afcca6d7f6d504b85083f7e8d36d2a
-      internalID: -1085259427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead4
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f63aecfe968ad1543a6ecbd7af31c589
-      internalID: 42054295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterDead5
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 274fa846a7ec95d4aa6a38db9e664ee3
-      internalID: 1875204475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_77
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfafeb3d37893354e931d348c27d2195
-      internalID: -2043085723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook0
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 960e14bbc0864174d9ae3b4283babe1a
-      internalID: -707119616
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook1
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 48
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e89f97a5125db2b4bab22cdf190cc91b
-      internalID: -1969644399
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 880e76b0675214a4c9fc1d02c1a275dd
-      internalID: -248300594
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook3
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 778224d4991d7e045a2f5f39059d469c
-      internalID: -1458919981
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85196f2785221364195f9118f6c03af8
-      internalID: 29047954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook5
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 790deb6e8c66e0244a63ad0021beb97f
-      internalID: -200915499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook6
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4724cd6875d77ed4fba46c449313a928
-      internalID: -1145556943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHook7
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 677998cbbe462ac4bb36fbfd053a93a9
-      internalID: 243464306
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterRobot_86
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79c434f197f5ae74893c3c67ab2a8d82
-      internalID: -1408086608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHookEngage0
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 155815dd9e0143f4ca6610054ee48e5a
-      internalID: -944022452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHookEngage1
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c0c9f3a581af494abae7b30c46a9258
-      internalID: 618149134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHookEngage2
-      rect:
-        serializedVersion: 2
-        x: 216
-        y: 24
-        width: 24
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 44a46d354d23c714789ca8e925ce3c10
-      internalID: 1260718761
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CharacterHookEngage3
+      name: LiftDown_CharacterRobot_111
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1af8d7ff50fd13b4f8b69c473dfec090
-      internalID: 1543800072
+      spriteID: 44e977a8d083ff446b6f77939f4dfd60
+      internalID: -1485112946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharacterHookEngage4
+      name: LiftDown_CharacterRobot_112
       rect:
         serializedVersion: 2
-        x: 24
+        x: 64
         y: 0
-        width: 24
-        height: 24
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2be9744f29e2b244bd398d51a31a395
-      internalID: 481551365
+      spriteID: d03b015f495a78a45aaca5e2089d47c5
+      internalID: -1398187764
       vertices: []
       indices: 
       edges: []
@@ -2046,98 +2487,123 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CharacterGrabWall2: 1108358404
-      CharacterWalkCharge3: -40542178
-      CharacterWalkCharge4: -1529454815
-      CharacterHurt2: -887631743
-      CharacterRobot_70: -1505145018
-      CharacterSliceWall3: 387633798
-      CharacterJumpChage2: 1439768861
-      CharacterDead3: -1085259427
-      CharacterWalkCharge6: 431412206
-      CharacterJumpChage0: 323140606
-      CharacterHook7: 243464306
-      CharacterRobot_33: 2031150003
-      CharacterJumpFall1: -1635158470
-      CharacterWalkCharge8: -1904874878
-      CharacterRobot_24: 1933230783
-      CharacterRobot_86: -1408086608
-      CharacterDead4: 42054295
-      CharacterWalk1: -1196552169
-      CharacterWalkCharge7: 67028652
-      CharacterRobot_48: -1861474637
-      CharacterHook2: -248300594
-      CharacterWalk2: 695379887
-      CharacterDead1: 990779680
-      SupportDie1: -793992414
-      CharacterWalk6: -786836253
-      CharacterJump1: -620046910
-      CharacterSliceWall2: 1045271243
-      CharacterWalkCharge5: -832517295
-      CharacterHookEngage2: 1260718761
-      CharacterRobot_40: 1413516070
-      CharacterIdleCharge3: 2085171756
-      CharacterSliceWall1: -210891860
-      SupportDie2: -1812135304
-      CharacterWalkCharge0: -745665290
-      CharacterWalk5: 1388237970
-      CharacterHook6: -1145556943
-      CharacterDeadCharge5: 1691330651
-      CharacterJumpChageFall0: 2043976104
-      CharacterIdle1: 1994969273
-      CharacterWalk4: -1716985885
-      CharacterSliceWall0: 1263137646
-      SupportIddle2: -509388286
-      CharacterGrabWall1: -1200452111
-      CharacterHook3: -1458919981
-      CharacterIdleCharge0: 2065708367
-      CharacterHook0: -707119616
-      CharacterRobot_53: 1811178459
-      CharacterDeadCharge4: -1128643892
-      CharacterGrabWall5: -2084768514
-      CharacterHookEngage3: 1543800072
-      SupportIddle1: -1433891172
-      CharacterGrabWall3: 1214925162
-      CharacterIdle0: -192872299
-      CharacterRobot_18: -1503194610
-      CharacterHookEngage1: 618149134
-      CharacterJump0: -1716027307
-      SupportDie0: -946823378
-      CharacterDeadCharge1: 568768048
-      CharacterIdle2: -998993919
-      CharacterGrabWall4: 31874377
-      CharacterIdleCharge1: -1595252241
-      CharacterHook1: -1969644399
-      CharacterJumpFall0: -1818199670
-      CharacterHook4: 29047954
-      CharacterDeadCharge3: 1391567731
-      SupportIddle0: 548746054
-      CharacterDead2: 997382485
-      CharacterRobot_77: -2043085723
-      CharacterDead5: 1875204475
-      CharacterWalk3: -232396308
-      CharacterHurt0: -2042212369
-      CharacterHook5: -200915499
-      CharacterJumpChage1: -371076178
-      CharacterDead0: -996461012
-      CharacterHookEngage0: -944022452
-      CharacterWalk0: 1349891291
-      CharacterJumpChageFall1: 456843285
-      CharacterGrabWall0: -314422174
-      CharacterJump2: 1035835965
-      CharacterWalkCharge1: -485995600
-      CharacterWalkCharge2: 256457261
-      CharacterSliceWall4: 224457836
-      CharacterIdleCharge2: 76244814
-      CharacterDeadCharge2: 1354611518
-      SupportIddle3: -972333367
-      CharacterHookEngage4: 481551365
-      CharacterDeadCharge0: -1478541169
-      CharacterWalk7: -1953939414
-      CharacterRobot_11: 1103720538
-      CharacterIdle3: 1878485798
-      CharacterHurt1: -126014333
-      CharacterRobot_63: 1911618569
+      FallCarry_CharacterRobot_45: 22404288
+      Throw_CharacterRobot_101: -1907434463
+      Jump_CharacterRobot_36: 235631113
+      Hook_CharacterRobot_89: 1121640372
+      Carry_CharacterRobot_49: -719205409
+      Hook_CharacterRobot_88: 2022579398
+      DeathCarry_CharacterRobot_62: -1369211958
+      GrabWall_CharacterRobot_17: -595331660
+      Iddle_CharacterRobot_16: 892591461
+      JumpCarry_CharacterRobot_43: 1747199308
+      Lower_CharacterRobot_108: -1312512931
+      SupDeath_CharacterRobot_7: 230600975
+      HookUp_CharacterRobot_78: 1758755957
+      SupIdle_CharacterRobot_2: 223369500
+      Attack_CharacterRobot_11: 417177086
+      CharacterRobot_9: -1063447359
+      SupIdle_CharacterRobot_4: 1556755615
+      WalkCarry_CharacterRobot_58: -343872186
+      Death_CharacterRobot_71: 1195054738
+      Walk_CharacterRobot_30: 1443233932
+      GrabWall_CharacterRobot_19: 1357548267
+      Iddle_CharacterRobot_14: 1410908641
+      DeathCarry_CharacterRobot_66: -1316687640
+      SupIdle_CharacterRobot_0: -693932971
+      Dash_CharacterRobot_97: -61909748
+      HookUp_CharacterRobot_75: -1591598703
+      DeathCarry_CharacterRobot_67: 739726680
+      DeathCarry_CharacterRobot_63: -746165230
+      Iddle_CharacterRobot_15: -463863496
+      Hurt_CharacterRobot_39: -1066604597
+      WalkCarry_CharacterRobot_56: -1545876591
+      Dash_CharacterRobot_99: 1000617107
+      Attack_CharacterRobot_8: -868768876
+      Lower_CharacterRobot_106: 1799826563
+      GrabWall_CharacterRobot_21: 938134543
+      Lower_CharacterRobot_110: 1177116306
+      Hook_CharacterRobot_85: 1575665546
+      SupDeath_CharacterRobot_5: -1063447359
+      Jump_CharacterRobot_38: -897248048
+      Walk_CharacterRobot_35: -1557978947
+      WalkCarry_CharacterRobot_55: 1554023906
+      LiftDown_CharacterRobot_111: -1485112946
+      HookGrabUp_CharacterRobot_82: -1562870765
+      Walk_CharacterRobot_32: 1889528636
+      HookUp_CharacterRobot_79: -994859323
+      HookGrabUp_CharacterRobot_81: 1817631700
+      Death_CharacterRobot_70: -1746387509
+      Lift_CharacterRobot_105: 1403213057
+      Walk_CharacterRobot_31: 1827072970
+      FallCarry_CharacterRobot_46: -1342288248
+      Throw_CharacterRobot_103: 67639906
+      Walk_CharacterRobot_28: -16869802
+      CharacterRobot_113: 1121640372
+      SupIdle_CharacterRobot_1: -1291339965
+      HookGrabUp_CharacterRobot_80: -385676252
+      Dash_CharacterRobot_95: -929143158
+      Carry_CharacterRobot_52: 1936064371
+      Walk_CharacterRobot_29: 777509739
+      SlideWall_CharacterRobot_26: -643883291
+      Fall_CharacterRobot_47: -1103220610
+      Attack_CharacterRobot_9: -1249453805
+      DeathCarry_CharacterRobot_64: -324619452
+      HookGrab_CharacterRobot_91: 491391428
+      SlideWall_CharacterRobot_24: -1519476896
+      Death_CharacterRobot_68: 1151196003
+      SlideWall_CharacterRobot_23: -898968494
+      JumpCarry_CharacterRobot_44: 1419299093
+      Walk_CharacterRobot_34: 105325090
+      WalkCarry_CharacterRobot_57: 74679554
+      JumpCarry_CharacterRobot_42: 683905562
+      Hook_CharacterRobot_87: -500145772
+      Throw_CharacterRobot_102: -1136285019
+      Carry_CharacterRobot_51: 1437449912
+      HookUp_CharacterRobot_76: -1084125783
+      Jump_CharacterRobot_37: 2012570364
+      Attack_CharacterRobot_12: -1948733304
+      WalkCarry_CharacterRobot_61: -487835543
+      HookGrab_CharacterRobot_90: 1881566058
+      Hurt_CharacterRobot_41: -653289470
+      Dash_CharacterRobot_98: -385397000
+      Throw_CharacterRobot_100: 83805883
+      Iddle_CharacterRobot_13: 1410908641
+      SlideWall_CharacterRobot_27: -2010102082
+      Lower_CharacterRobot_109: -118173432
+      HookGrab_CharacterRobot_92: 484576850
+      Lift_CharacterRobot_104: 128047632
+      WalkCarry_CharacterRobot_60: 1561087770
+      CharacterRobot_0: 1839836383
+      HookGrab_CharacterRobot_94: -402462207
+      LiftDown_CharacterRobot_112: -1398187764
+      Hurt_CharacterRobot_40: -1453699823
+      SlideWall_CharacterRobot_25: 1785853083
+      HookUp_CharacterRobot_77: 463242226
+      Death_CharacterRobot_73: 1611881949
+      CharacterRobot_8: -352357017
+      GrabWall_CharacterRobot_22: -58130812
+      Hook_CharacterRobot_86: -86598466
+      Lower_CharacterRobot_107: 1953624106
+      Fall_CharacterRobot_48: 741454647
+      Death_CharacterRobot_72: 820715879
+      Death_CharacterRobot_69: 1944261215
+      GrabWall_CharacterRobot_20: 484446709
+      WalkCarry_CharacterRobot_54: -1863939204
+      Dash_CharacterRobot_96: 1338261242
+      Carry_CharacterRobot_50: -274736114
+      DeathCarry_CharacterRobot_65: 1847468828
+      WalkCarry_CharacterRobot_59: -1077957347
+      HookGrab_CharacterRobot_93: -669092276
+      Walk_CharacterRobot_33: -1858379295
+      SupDeath_CharacterRobot_6: -458629119
+      GrabWall_CharacterRobot_18: -1858379295
+      WalkCarry_CharacterRobot_53: 56674893
+      HookUp_CharacterRobot_74: -1811306969
+      SupIdle_CharacterRobot_3: 1827072970
+      HookGrabUp_CharacterRobot_83: -994859323
+      Hook_CharacterRobot_84: -111306966
+      Attack_CharacterRobot_10: -906090155
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

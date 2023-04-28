@@ -4,36 +4,50 @@ using UnityEngine;
 public class Player_Anim : MonoBehaviour
 {
     public Animator anim;
+    private AnimationState currentState;
+    public enum AnimationState { Idle, Walk, Jump, Fall }
 
     void Start()
     {
         anim = GetComponent<Animator>();
+          currentState = AnimationState.Idle;
     }
 
     void Update() 
     {
-        // VelX
-        float velX = Player_Physics2D.corpoDoPersonagem.velocity.x;
-        if (velX < 0.1 && velX > -0.1f) 
-        {velX = 0;}
-        anim.SetFloat("vel.X", Mathf.Abs(velX));
+        // Walk
+        float velX = Mathf.Abs(Player_Physics2D.corpoDoPersonagem.velocity.x);
+        if (Mathf.Approximately(velX, 0)) {velX = 0;}
+        if(velX > 0.1 && Player_CheckColision.isGround == true){ChangeAnimationState(AnimationState.Walk);}
 
-        // VelY
+        // Jump fall
         float velY = Player_Physics2D.corpoDoPersonagem.velocity.y;
-        if (velY < 0.1 && velY > -0.1f) 
-        {velY = 0;}
-        anim.SetFloat("vel.Y", velY);
+        if (Mathf.Approximately(velY, 0)) {velY = 0;}
+        if(Player_CheckColision.isGround == false)
+        {
+            if(velY > 0.1){ChangeAnimationState(AnimationState.Jump);}
+            if(velY < -0.1){ChangeAnimationState(AnimationState.Fall);}
+        }
 
-        // isGroud
-        if(Player_CheckColision.isGround || Player_CheckColision.isPlatformGrounded)
-        {anim.SetBool("isGround", true);} else {anim.SetBool("isGround", false);}
+        // Idle
+        if(Mathf.Approximately(velY, 0) && Mathf.Approximately(velX, 0) && Player_CheckColision.isGround == true)
+        {ChangeAnimationState(AnimationState.Idle);}
 
-        // isWall
-        if(Player_CheckColision.isWall || Player_CheckColision.isPlatformLeft || Player_CheckColision.isPlatformRight)
-        {anim.SetBool("isWall", true);} else {anim.SetBool("isWall", false);}
 
-        // isCharge
-        if(Player_Carried.HolderItem != null)
-        {anim.SetBool("charge", true);} else {anim.SetBool("charge", false);}
+
     }
+
+    void ChangeAnimationState( AnimationState newState)
+    {
+         if (currentState == newState)
+        {
+            return;
+        }
+
+
+        anim.Play(newState.ToString().ToLower());
+        currentState = newState;
+    }
+
+
 }
