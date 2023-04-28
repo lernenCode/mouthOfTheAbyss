@@ -72,7 +72,15 @@ public class Player_WallMove : MonoBehaviour
     }
 
     private void WallJumpLeft()
-    { Player_Physics2D.corpoDoPersonagem.AddForce(new Vector2(-wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);}
+    { 
+        Player_Physics2D.corpoDoPersonagem.AddForce(new Vector2(-wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);
+        transform.localRotation = Quaternion.Euler(0, 180, 0);
+        Player_Input.OlhandoDireita = false;
+    }
     private void WallJumpRight()
-    { Player_Physics2D.corpoDoPersonagem.AddForce(new Vector2(wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse); }
+    { 
+        Player_Physics2D.corpoDoPersonagem.AddForce(new Vector2(wallJumpForce.x, wallJumpForce.y), ForceMode2D.Impulse);
+        transform.localRotation = Quaternion.Euler(0, 0, 0);
+        Player_Input.OlhandoDireita = true;
+    }
 }
