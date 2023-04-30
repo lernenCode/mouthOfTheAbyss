@@ -14,16 +14,19 @@ public class Player_Carried : MonoBehaviour
     [SerializeField] private float throwableForce;
     [SerializeField] private float maxPressButton;
     public float pressButton;
+    public static bool CrouchToPickUp;
     public static bool carryLock;
     public static bool Throwable;
     public static bool Throwablefinished;
     private bool inThrowableObject;
     private GameObject Object;
+    private RaycastHit2D CollisionObject;
+
     private void Update()
     {
         #region Verificar Colision com Objeto
         // Verificar se tem item pra pegar colidindo
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), rayDistance, whatIsCatchable);
+        CollisionObject = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), rayDistance, whatIsCatchable);
         #endregion
 
         #region Colocar || Arrmesar Item
@@ -47,31 +50,41 @@ public class Player_Carried : MonoBehaviour
         #region Pegar o item
         if (Player_Input.InputCarry)
         {
-            if (hit.collider != null && HolderItem == null)
+            if (CollisionObject.collider != null && HolderItem == null)
             {
-                // Passar quem é meu item
-                HolderItem = hit.collider.gameObject;
-
-                // Transformar meu item em filhoss
-                HolderItem.transform.SetParent(transform);
-
-                // Dar uma nova posicao para meu item
-                HolderItem.transform.position = HolderPosition.position;
-
-                // Se ele tiver um rb2D desligar controle de física
-                if (HolderItem.GetComponent<Rigidbody2D>())
-                {
-                    HolderItem.GetComponent<Rigidbody2D>().simulated = false;
-
-                    // Alterar de static para dynamic
-                    HolderItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                }
-
-                // Tempo para poder soltar o item depois que pegou
-                StartCoroutine(Player_IEnumerator.carryLock());
+                CrouchToPickUp = true;
+                Player_Input.canMove = false;
             }
         }
         #endregion
+    }
+
+    public void PickUpItem()
+    {
+        // parar animação de pegar
+        CrouchToPickUp = false;
+        Player_Input.canMove = true;
+
+        // Passar quem é meu item
+        HolderItem = CollisionObject.collider.gameObject;
+
+        // Transformar meu item em filhoss
+        HolderItem.transform.SetParent(transform);
+
+        // Dar uma nova posicao para meu item
+        HolderItem.transform.position = HolderPosition.position;
+
+        // Se ele tiver um rb2D desligar controle de física
+        if (HolderItem.GetComponent<Rigidbody2D>())
+        {
+            HolderItem.GetComponent<Rigidbody2D>().simulated = false;
+
+            // Alterar de static para dynamic
+            HolderItem.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+        }
+
+        // Tempo para poder soltar o item depois que pegou
+        StartCoroutine(Player_IEnumerator.carryLock());
     }
     public IEnumerator ThrowableHolderItem()
     {

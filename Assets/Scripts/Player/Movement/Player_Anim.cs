@@ -35,35 +35,81 @@ public class Player_Anim : MonoBehaviour
         #region AnimationOffGround 
             if(isGround == false)
             {
-                #region Jump
-                    if(velY > 0.1)
-                    {ChangeAnimationState(AnimationState.Jump);}
-                #endregion
+                if(Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false)
+                {
+                    #region Jump
+                        if(velY > 0.1)
+                        {
+                            if(Player_Carried.HolderItem != null) {ChangeAnimationState(AnimationState.Jump_Carry);}
+                            else ChangeAnimationState(AnimationState.Jump);
+                        }
+                    #endregion
 
-                #region Fall
-                    if(velY < -0.1 && Player_CheckColision.isWall == false)
-                    {ChangeAnimationState(AnimationState.Fall);}
-                #endregion
+                    #region Fall
+                        if(velY < -0.1 && Player_CheckColision.isWall == false)
+                        {
+                            if(Player_Carried.HolderItem != null) {ChangeAnimationState(AnimationState.Fall_Carry);}
+                            else ChangeAnimationState(AnimationState.Fall);
+                        }
+                    #endregion
 
-                #region Slide
-                    if(velY < -0.1  && isWall == true)
-                    {ChangeAnimationState(AnimationState.Slide);}
-                #endregion
+                    #region Slide
+                        if(velY < -0.1  && isWall == true )
+                        {ChangeAnimationState(AnimationState.Slide);}
+                    #endregion
+                }
             }
         #endregion
 
         #region AnimationOnGround
             if(isGround == true)
             {   
-                #region Walk e Iddle
-                    if(velX > 0.1){ChangeAnimationState(AnimationState.Walk);}
-                    else if (Mathf.Approximately(velY, 0)){ChangeAnimationState(AnimationState.Idle);}
-                #endregion
+                if(Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false)
+                {
+                    #region Walk e Iddle
+
+                        if (velX > 0.1)
+                        {
+                            if(Player_Carried.HolderItem != null) {ChangeAnimationState(AnimationState.Walk_Carry);}
+                            else ChangeAnimationState(AnimationState.Walk);
+                        }
+
+                        if (velX < 0.1)
+                        {
+                            if(Player_Carried.HolderItem != null) {ChangeAnimationState(AnimationState.Idle_Carry);}
+                            else ChangeAnimationState(AnimationState.Idle);
+                        }
+                    #endregion
+                }
             }
         #endregion
 
         #region AnimationNoMatterWhere
+
+            #region PickUp
+                if(Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false)
+                {ChangeAnimationState(AnimationState.Lift);}
+            #endregion
+
+            #region Dash
+                if(Player_Dash.isDashing == true && playerDamage.isDamage == false)
+                {ChangeAnimationState(AnimationState.Dash);}
+            #endregion
+
+            #region Hurt
+                if(playerDamage.isDamage == true) 
+                {ChangeAnimationState(AnimationState.Hurt);}
+            #endregion
+
         #endregion
+
+        if(Input.GetKeyDown("k"))
+        {
+            Debug.Log(velX);
+            Debug.Log(velY);
+            Debug.Log(isGround);
+            Debug.Log(isWall);
+        }
     }
 
     void ChangeAnimationState( AnimationState newState)

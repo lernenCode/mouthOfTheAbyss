@@ -26,9 +26,12 @@ public class Player_WallMove : MonoBehaviour
             //> O PERSONAGEM PODE ESCORREGAR NA PAREDE
             if (Player_CheckColision.isWall || Player_CheckColision.isPlatformRight || Player_CheckColision.isPlatformLeft)
             {
-                if (Player_Input.InputRight || Player_Input.InputLeft)
+                if(Player_CheckColision.isGround == false)
                 {
-                    isSliding = true;
+                    if (Player_Input.InputRight || Player_Input.InputLeft)
+                    {
+                        isSliding = true;
+                    }
                 }
             }
             else { isSliding = false; }

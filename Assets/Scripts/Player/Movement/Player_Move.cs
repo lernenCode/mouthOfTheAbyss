@@ -31,7 +31,7 @@ public class Player_Move : MonoBehaviour
             float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
             // Fazer movimento
-            if (Player_Input.InputRight || Player_Input.InputLeft)
+            if (Player_Input.InputRight && Player_Input.canMove == true|| Player_Input.InputLeft && Player_Input.canMove == true)
             {
                 if (Player_Dash.runningDash == false && RopeDraw.InputRope == false && Player_WallMove.isJumpWall == false && player_status.isDie == false)
                 {

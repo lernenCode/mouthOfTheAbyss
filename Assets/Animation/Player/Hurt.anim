@@ -21,9 +21,9 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -1066604597, guid: 619941cd9eb8130458c49742b9b46ebb, type: 3}
-    - time: 0.21666667
+    - time: 0.18333334
       value: {fileID: -1453699823, guid: 619941cd9eb8130458c49742b9b46ebb, type: 3}
-    - time: 0.41666666
+    - time: 0.33333334
       value: {fileID: -653289470, guid: 619941cd9eb8130458c49742b9b46ebb, type: 3}
     attribute: m_Sprite
     path: 
@@ -52,7 +52,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.43333334
+    m_StopTime: 0.35000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -71,4 +71,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.33333334
+    functionName: recovery
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

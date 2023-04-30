@@ -20,7 +20,6 @@ public class playerKnockback : MonoBehaviour
     {
         if(playerDamage.isDamage)
         {
-            //Player_Input.canMove = false;
             StartCoroutine(flickerSprite());
             Physics2D.IgnoreLayerCollision(layerPlayer, layerEnemy, true);
         } 
@@ -28,7 +27,6 @@ public class playerKnockback : MonoBehaviour
         else 
         { 
             Physics2D.IgnoreLayerCollision(layerPlayer, layerEnemy, false); 
-            //Player_Input.canMove = true;
         }
     }
 
@@ -48,6 +46,12 @@ public class playerKnockback : MonoBehaviour
             spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    void recovery()
+    {
+        playerDamage.isDamage = false;
+        Player_Input.canMove =  true;
     }
 }
 

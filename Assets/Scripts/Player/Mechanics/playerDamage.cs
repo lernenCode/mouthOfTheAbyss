@@ -6,8 +6,6 @@ public class playerDamage : MonoBehaviour
 {
     [Header ("Player")]
     [SerializeField] public LayerMask Player;
-    [SerializeField] public float recoveryTime;
-    public static float _recoveryTime;
     [SerializeField] public float damage;
     private bool IsTouching;
     public static bool isDamage;
@@ -17,7 +15,6 @@ public class playerDamage : MonoBehaviour
     void Start()
     {
         boxCol = GetComponent<BoxCollider2D>();
-        _recoveryTime = recoveryTime;
     }
 
     // Update is called once per frame
@@ -28,19 +25,15 @@ public class playerDamage : MonoBehaviour
         {
             if(isDamage == false )
             {
-                StartCoroutine(recovery());
+                knocback();
             }
         }
     }
 
-    public IEnumerator recovery()
+    void knocback()
     {
-        isDamage = true;
         Player_Input.canMove =  false;
+        isDamage = true;
         playerKnockback.knocback(damage, transform.position);
-        yield return new WaitForSeconds(_recoveryTime);
-        Player_Input.canMove =  true;
-        yield return new WaitForSeconds(_recoveryTime);
-        isDamage = false;
     }
 }
