@@ -13,11 +13,25 @@ public class Player_RopeMove : MonoBehaviour
         // Grabling
         if (RopeDraw.RopeInColision)
         {
-            // Garantir forças de fisica 🌠
-            Player_Physics2D.ResetVelocity();
-
-            if (Player_Input.OlhandoDireita)
+            
+            if (RopeDraw.ropeUp)
             {
+                // Garantir forças de fisica 🌠
+                Player_Physics2D.ResetVelocity();
+
+                // Falar que estou fazendo o Dash 0️⃣|1️⃣
+                GraplingRope = true;
+
+                // Executar Dash 🏃
+                Player_Physics2D.corpoDoPersonagem.AddForce
+                (new Vector2(0, Speed), ForceMode2D.Impulse);
+            }
+
+            else if (Player_Input.OlhandoDireita)
+            {
+                // Garantir forças de fisica 🌠
+                Player_Physics2D.ResetVelocity();
+
                 // Falar que estou fazendo o Dash 0️⃣|1️⃣
                 GraplingRope = true;
 
@@ -25,6 +39,7 @@ public class Player_RopeMove : MonoBehaviour
                 Player_Physics2D.corpoDoPersonagem.AddForce
                 (new Vector2(Speed, 0), ForceMode2D.Impulse);
             }
+
             else
             {
                 // Garantir forças de fisica 🌠
@@ -42,10 +57,10 @@ public class Player_RopeMove : MonoBehaviour
         // baque da parede
         if (GraplingRope)
         {
-            if(Player_CheckColision.isWall || Player_CheckColision.isPlatformLeft || Player_CheckColision.isPlatformRight)
+            if (Player_CheckColision.isWall || Player_CheckColision.isPlatformLeft || Player_CheckColision.isPlatformRight || Player_CheckColision.isRoof)
             {
-                Player_WallMove.isJumpRope = true;
                 GraplingRope = false;
+                Player_WallMove.isJumpRope = true;
             }
         }
 

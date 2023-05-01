@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_CheckColision : MonoBehaviour
 {
+    [Header("CheckRoof")]
+    public static bool isRoof;
+
     [Header("CheckGround")]
     public static bool isGround;
 
@@ -30,24 +33,36 @@ public class Player_CheckColision : MonoBehaviour
 
     private void Update()
     {
+        if(Input.GetKey("k")){ Debug.Log(isRoof); Debug.Log(RopeDraw.ropeUp);}
         // Npc
         inNpcRange = npcTalkRange();
 
         // Ground
-        isGround = isGrounded();   
+        isGround = isGrounded();
+
+        // Roof
+        isRoof = isRoofed();
 
         // Wall
         isWallLeft = isWalledLeft();
-        isWallRight =  isWalledRight();
+        isWallRight = isWalledRight();
 
         // platform
         isPlatformGrounded = isPlatformed();
         isPlatformLeft = isPlatformedLeft();
         isPlatformRight = isPlatformedRight();
-        
-        if(isPlatformedRight() || isPlatformedLeft() || isPlatformed()) {isPlatform = true;} else {isPlatform = false;}
-        if(isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
+
+        if (isPlatformedRight() || isPlatformedLeft() || isPlatformed()) { isPlatform = true; } else { isPlatform = false; }
+        if (isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
     }
+
+    #region CheckRoof
+    private bool isRoofed()
+    {
+        RaycastHit2D isRoof = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.up, 0.1f, whatisGround | whatIsCatchable | whatIsPlatform);
+        return isRoof.collider != null;
+    }
+    #endregion
 
     #region CheckGround
     private bool isGrounded()
@@ -56,7 +71,7 @@ public class Player_CheckColision : MonoBehaviour
         return isGround.collider != null;
     }
     #endregion
-    
+
     #region CheckNPC
 
     private bool npcTalkRange()
@@ -89,13 +104,13 @@ public class Player_CheckColision : MonoBehaviour
         return isPlatformGrounded.collider != null;
     }
 
-     private bool isPlatformedLeft()
+    private bool isPlatformedLeft()
     {
         RaycastHit2D isPlatformLeft = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatIsPlatform);
         return isPlatformLeft.collider != null;
     }
 
-     private bool isPlatformedRight()
+    private bool isPlatformedRight()
     {
         RaycastHit2D isPlatformRight = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatIsPlatform);
         return isPlatformRight.collider != null;

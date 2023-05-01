@@ -17,6 +17,7 @@ public class Player_Carried : MonoBehaviour
     public static bool CrouchToPickUp;
     public static bool carryLock;
     public static bool Throwable;
+    public static bool startAnimThrowable;
     public static bool Throwablefinished;
     private bool inThrowableObject;
     private GameObject Object;
@@ -37,13 +38,17 @@ public class Player_Carried : MonoBehaviour
             { pressButton += 0.07f; }
         }
 
-        //verificar se vai colocar ou arremesar
+        //Arremesar item
         if (Player_Input.InputCarryUP && carryLock == false && HolderItem != null)
         {
             Throwable = true;
-            Throwablefinished = true;
-            HolderItem.layer = LayerMask.NameToLayer("Throwable");
-            StartCoroutine(ThrowableHolderItem());
+            Player_Input.canMove = false;
+        }
+
+        // Arremesar mesmo se machucado
+        if(Throwable == true && playerDamage.isDamage == true)
+        {
+            ThrowableHolderItem();
         }
         #endregion
 
@@ -86,11 +91,13 @@ public class Player_Carried : MonoBehaviour
         // Tempo para poder soltar o item depois que pegou
         StartCoroutine(Player_IEnumerator.carryLock());
     }
-    public IEnumerator ThrowableHolderItem()
-    {
-        if (Throwable)
-        {
-            #region Arremesar
+    public void ThrowableHolderItem()
+    { 
+        #region Arremesar
+            Player_Input.canMove = true;
+            Throwablefinished = true;
+            HolderItem.layer = LayerMask.NameToLayer("Throwable");
+
             // Se ele tiver um rb2D ligar controle de física
             if (HolderItem.GetComponent<Rigidbody2D>())
             { HolderItem.GetComponent<Rigidbody2D>().simulated = true; }
@@ -102,12 +109,9 @@ public class Player_Carried : MonoBehaviour
             else {HolderItem.GetComponent<Rigidbody2D>().AddForce(new Vector2(throwableForce * Player_Physics2D.Direction.x ,throwableForce), ForceMode2D.Impulse);}
             pressButton = 0;
 
-            yield return null;
-            HolderItem = null;  // Limpar item segurado
-
+            HolderItem = null;
             Throwable = false;
-            #endregion
-        }
+        #endregion
     }
     void OnDrawGizmosSelected()
     {
