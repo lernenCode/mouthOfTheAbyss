@@ -33,7 +33,6 @@ public class Player_CheckColision : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey("k")){ Debug.Log(isRoof); Debug.Log(RopeDraw.ropeUp);}
         // Npc
         inNpcRange = npcTalkRange();
 

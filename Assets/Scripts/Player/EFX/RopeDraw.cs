@@ -184,13 +184,13 @@ public class RopeDraw : MonoBehaviour
             if (ropeUp == true)
             {
                 RaycastHit2D hit = Physics2D.Raycast(firePoint.position, transform.TransformDirection(Vector2.up), distance * Counter, whatIsColision | whatIsCatchable | whatIsPlatform);
-                if (hit) { RopeInColision = true; } else { RopeInColision = false; }
+                if (hit) { RopeInColision = true;  advanceRope = false;} else { RopeInColision = false; }
             }
 
             else
             {
                 RaycastHit2D hit = Physics2D.Raycast(firePoint.position, transform.TransformDirection(Vector2.right), distance * Counter, whatIsColision | whatIsCatchable | whatIsPlatform);
-                if (hit) { RopeInColision = true; } else { RopeInColision = false; }
+                if (hit) { RopeInColision = true;  advanceRope = false;} else { RopeInColision = false; }
             }
         }
     }

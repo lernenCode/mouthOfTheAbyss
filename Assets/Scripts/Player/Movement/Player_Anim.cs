@@ -23,6 +23,24 @@ public class Player_Anim : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown("l"))
+        {
+            string debugMessage = 
+                    "Esta no chao: "        + isGround                  +   "\n"
+                +   "Esta na parede: "      + isWall                    +   "\n"
+                +   "Velocidade X: "        + velX                      +   "\n"
+                +   "Velocidade Y: "        + velY                      +   "\n"
+                +   "Dash: "                + Player_Dash.isDashing     +   "\n"
+                +   "Damage: "              + playerDamage.isDamage     +   "\n"
+                +   "InputRope: "           + RopeDraw.InputRope        +   "\n"
+                +   "RopeAdvance: "         + RopeDraw.advanceRope      +   "\n"
+                +   "ReturnAdvance: "       + RopeDraw.returningRope    +   "\n"
+                +   "HookRope: "            + RopeDraw.hookRope         +   "\n"
+                +   "RopeInColision: "      + RopeDraw.RopeInColision   +   "\n"
+
+                + "";
+            Debug.Log(debugMessage);
+        }
 
         #region CallFunctions
         AnimationOffGround();
@@ -42,9 +60,6 @@ public class Player_Anim : MonoBehaviour
         if (Mathf.Approximately(velY, 0)) { velY = 0; }
         if (Mathf.Approximately(velX, 0)) { velX = 0; }
         #endregion
-
-        // Debug log
-        //if (Input.GetKeyDown("k")) { Debug.Log(velX); Debug.Log(velY); Debug.Log(isGround); Debug.Log(isWall); }
     }
 
     public void AnimationOffGround()
@@ -52,7 +67,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == false)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false)
+            && Player_Carried.Throwable == false && RopeDraw.advanceRope == false && RopeDraw.RopeInColision == false && RopeDraw.returningRope == false)
             {
                 #region Jump
                 if (velY > 0.1)
@@ -82,7 +97,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == true)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false)
+            && Player_Carried.Throwable == false && RopeDraw.advanceRope == false && RopeDraw.RopeInColision == false && RopeDraw.returningRope == false)
             {
                 #region Walk e Iddle
 
@@ -103,8 +118,13 @@ public class Player_Anim : MonoBehaviour
     }
     public void AnimationNoMatterWhere()
     {
+        
+        #region HookRope
+      
+        #endregion
+
         #region PickUp
-        if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false)
+        if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false )
         { ChangeAnimationState(AnimationState.Lift); }
         #endregion
 
@@ -128,7 +148,7 @@ public class Player_Anim : MonoBehaviour
     {
         //Se o novo estado for o mesmo que o estado atual, não faz nada
         if (currentState == newState)
-        {return;}
+        { return; }
 
         //Inicia a animação do novo estado e atualiza o estado atual
         anim.Play(newState.ToString().ToLower());
