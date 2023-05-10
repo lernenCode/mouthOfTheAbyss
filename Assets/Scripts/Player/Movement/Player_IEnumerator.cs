@@ -27,14 +27,6 @@ public class Player_IEnumerator : MonoBehaviour
     }
     #endregion
 
-    #region "Rope"
-    public static IEnumerator cooldownRope(float ropeCooldown) // Duracao⌚
-    {
-        yield return new WaitForSeconds(ropeCooldown);
-        RopeDraw.devolverRope = true;
-    }
-    #endregion
-
     #region carry
     public static IEnumerator carryLock()
     {

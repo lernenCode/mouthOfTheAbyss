@@ -128,7 +128,7 @@ public class Player_Input : MonoBehaviour
                 else { InputDown = false; }
 
                 #region Flip
-                if (RopeDraw.InputRope == false)
+                if (Player_Rope.drawingRope == false)
                 {
                     if (InputRight)
                     {

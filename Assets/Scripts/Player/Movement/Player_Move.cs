@@ -33,14 +33,14 @@ public class Player_Move : MonoBehaviour
             // Fazer movimento
             if (Player_Input.InputRight && Player_Input.canMove == true|| Player_Input.InputLeft && Player_Input.canMove == true)
             {
-                if (Player_Dash.runningDash == false && RopeDraw.InputRope == false && Player_WallMove.isJumpWall == false && player_status.isDie == false)
+                if (Player_Dash.runningDash == false && Player_Rope.drawingRope == false && Player_WallMove.isJumpWall == false && player_status.isDie == false)
                 {
                     Player_Physics2D.corpoDoPersonagem.AddForce(movement * Vector2.right);
                 }
             }
 
             // Parar movimento
-            else if (Player_Dash.runningDash == false && RopeDraw.InputRope == false 
+            else if (Player_Dash.runningDash == false && Player_Rope.drawingRope == false 
             && Player_WallMove.isJumpWall == false && playerDamage.isDamage == false)
             {
                 if(Player_CheckColision.isGround == true || Player_CheckColision.isPlatformGrounded == true) // se tiver no chao ou plataform

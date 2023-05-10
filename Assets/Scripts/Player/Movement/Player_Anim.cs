@@ -26,17 +26,17 @@ public class Player_Anim : MonoBehaviour
         if (Input.GetKeyDown("l"))
         {
             string debugMessage = 
-                    "Esta no chao: "        + isGround                  +   "\n"
-                +   "Esta na parede: "      + isWall                    +   "\n"
-                +   "Velocidade X: "        + velX                      +   "\n"
-                +   "Velocidade Y: "        + velY                      +   "\n"
-                +   "Dash: "                + Player_Dash.isDashing     +   "\n"
-                +   "Damage: "              + playerDamage.isDamage     +   "\n"
-                +   "InputRope: "           + RopeDraw.InputRope        +   "\n"
-                +   "RopeAdvance: "         + RopeDraw.advanceRope      +   "\n"
-                +   "ReturnAdvance: "       + RopeDraw.returningRope    +   "\n"
-                +   "HookRope: "            + RopeDraw.hookRope         +   "\n"
-                +   "RopeInColision: "      + RopeDraw.RopeInColision   +   "\n"
+                    "Esta no chao: "        + isGround                          +   "\n"
+                +   "Esta na parede: "      + isWall                            +   "\n"
+                +   "Velocidade X: "        + velX                              +   "\n"
+                +   "Velocidade Y: "        + velY                              +   "\n"
+                +   "Dash: "                + Player_Dash.isDashing             +   "\n"
+                +   "Damage: "              + playerDamage.isDamage             +   "\n"
+                +   ": "                    + Player_Rope.drawingRope           +   "\n"
+                +   ": "                    + Player_Rope.ropeAdvancing         +   "\n"
+                +   ": "                    + Player_Rope.ropeReturning         +   "\n"
+                +   ": "                    + Player_Rope.collidingRope         +   "\n"
+
 
                 + "";
             Debug.Log(debugMessage);
@@ -47,9 +47,10 @@ public class Player_Anim : MonoBehaviour
         AnimationOnGround();
         AnimationNoMatterWhere();
         #endregion
-
+        
         #region ParameterForAnimation
         // Referenciar Valores
+        
         velY = Player_Physics2D.corpoDoPersonagem.velocity.y;
         velX = Mathf.Abs(Player_Physics2D.corpoDoPersonagem.velocity.x);
 
@@ -67,7 +68,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == false)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && RopeDraw.advanceRope == false && RopeDraw.RopeInColision == false && RopeDraw.returningRope == false)
+            && Player_Carried.Throwable == false )
             {
                 #region Jump
                 if (velY > 0.1)
@@ -97,7 +98,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == true)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && RopeDraw.advanceRope == false && RopeDraw.RopeInColision == false && RopeDraw.returningRope == false)
+            && Player_Carried.Throwable == false)
             {
                 #region Walk e Iddle
 
