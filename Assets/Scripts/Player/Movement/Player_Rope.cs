@@ -13,6 +13,8 @@ public class Player_Rope : MonoBehaviour
     public static bool collidingRope;
     public static bool pullingRope;
     public static bool drawingRope;
+    public static bool ropeUp;
+    public static bool finishInitialPose;
 
     [Header("Layers")]
     [SerializeField] private LayerMask whatIsColision;
@@ -42,18 +44,18 @@ public class Player_Rope : MonoBehaviour
     void Start()
     { lineRenderer = GetComponent<LineRenderer>(); }
 
-    void Update()
+    private void Update()
     {
         // Condição para iniciar 
-        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy)
-        { drawingRope = true; player_status.reduceEnergy(takeEnergy);} 
-        //! ver uma forma melhor de tirar a energia (pensei em tirar 1ms antes de  chamar drawLine atraves da animação)
-
-        //! Isso aqui depois pode ser chamado por uma animação 
-        if (drawingRope == true)
-        { 
-            drawLine(); 
-        }
+        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy && Player_CheckColision.isWall == false)
+        { drawingRope = true; if (Player_Input.InputUp == true) { ropeUp = true; } else { ropeUp = false; } }
+    }
+    
+    void FixedUpdate()
+    {
+        // Desenhar
+        if (finishInitialPose == true)
+        { drawLine(); }
 
         // Movimento
         if (collidingRope == true)
@@ -61,7 +63,7 @@ public class Player_Rope : MonoBehaviour
 
         // Reiniciar a corda se o ciclo estiver completo
         if (ropeReturning == true && ropePositionPercentage <= 0)
-        { drawingRope = false; }
+        { restart(); }
 
         // Cancelar gravidade e movimento
         if (drawingRope == true && collidingRope == false)
@@ -72,16 +74,26 @@ public class Player_Rope : MonoBehaviour
         }
     }
 
+    void FinishInitialPose()
+    {
+        finishInitialPose = true;
+        player_status.reduceEnergy(takeEnergy); 
+    }
+
     void drawLine()
     {
         // Definir pontos
         pointA = startingPoint.position; // Posição do ponto A da corda
         pointB = endPoint.position; // Posição do ponto B da corda
 
-        // Avançar
-        if (ropeReturning == false && collidingRope == false)
-        { ropeAdvancing = true; ropePositionPercentage += .1f / ropeSpeed; } // Aumenta a porcentagem de avanço da corda
-        else { ropeAdvancing = false; }
+        // Calcular
+        distancePercent = Mathf.Lerp(0, maxDistance, ropePositionPercentage); // Calcula a posição da corda na distância máxima baseado na porcentagem de avanço
+        Vector3 pointAlongLine = distancePercent * Vector3.Normalize(pointB - pointA) + pointA; // Calcula a posição atual da corda ao longo da linha entre o ponto A e B
+
+        // Verificar colisão
+        Vector3 direction = (endPoint.position - startingPoint.position).normalized;
+        hit = Physics2D.Linecast(startingPoint.position, startingPoint.position + direction * (distancePercent * ropePositionPercentage + 0.2f), whatIsColision | whatIsCatchable | whatIsPlatform);
+        if (hit) { collidingRope = true; }
 
         // Trocar estados | Avançar > Recuar 
         if (ropePositionPercentage >= 1)
@@ -90,13 +102,14 @@ public class Player_Rope : MonoBehaviour
         if (ropePositionPercentage <= 0)
         { ropeAdvancing = true; ropeReturning = false; }
 
+        // Avançar
+        if (ropeReturning == false && collidingRope == false)
+        { ropeAdvancing = true; ropePositionPercentage += .1f / ropeSpeed; } // Aumenta a porcentagem de avanço da corda
+        else { ropeAdvancing = false; }
+
         // Recuar
         if (ropeReturning && collidingRope == false)
         { ropePositionPercentage -= .1f / ropeSpeed; } // Diminui a porcentagem de avanço da corda 
-
-        // Calcular
-        distancePercent = Mathf.Lerp(0, maxDistance, ropePositionPercentage); // Calcula a posição da corda na distância máxima baseado na porcentagem de avanço
-        Vector3 pointAlongLine = distancePercent * Vector3.Normalize(pointB - pointA) + pointA; // Calcula a posição atual da corda ao longo da linha entre o ponto A e B
 
         // Desenhar corda
         if (collidingRope == false)
@@ -107,19 +120,13 @@ public class Player_Rope : MonoBehaviour
 
         // Desenhar (ponto A) enquanto colidir
         else { lineRenderer.SetPosition(0, pointA); }
-
-        // Verificar colisão
-        Vector2 direction = (endPoint.position - startingPoint.position).normalized;
-        hit = Physics2D.Raycast(startingPoint.position, direction, distancePercent * ropePositionPercentage, whatIsColision | whatIsCatchable | whatIsPlatform);
-        if (hit) { collidingRope = true; }
-
-        // Debug
-        string debugMessage = "Advancing: " + ropeAdvancing + "\n" + "Return: " + ropeReturning + "\n" + "colliding: " + collidingRope + "\n" + "pulling: " + pullingRope + "\n" + "draw: " + drawingRope + "\n" + "";
-        Debug.Log(debugMessage);
     }
 
     void ropeMove()
     {
+        //  Trocar estado controlador
+        pullingRope = true;
+
         // Calcular o vetor direção entre o jogador e o ponto final
         Vector2 direction = (pointB - transform.position).normalized;
 
@@ -130,17 +137,18 @@ public class Player_Rope : MonoBehaviour
         if (Player_CheckColision.isWall || Player_CheckColision.isPlatformLeft || Player_CheckColision.isPlatformRight || Player_CheckColision.isRoof)
         {
             restart();
-            if(Player_CheckColision.isRoof == false)
+            if (Player_CheckColision.isRoof == false)
             { Player_WallMove.isJumpRope = true; }
         }
     }
 
     void restart()
     {
+        drawingRope = false; finishInitialPose = false; collidingRope = false;
         lineRenderer.SetPosition(0, new Vector3(0, 0, 0));
         lineRenderer.SetPosition(1, new Vector3(0, 0, 0));
-        ropePositionPercentage = 0; distancePercent = 0;
-        ropeAdvancing = false; ropeReturning = false; drawingRope = false; collidingRope = false;
+        ropePositionPercentage = -0.1f; distancePercent = -0.1f;
+        ropeAdvancing = false; ropeReturning = false; drawingRope = false; pullingRope = false;
     }
 
 }

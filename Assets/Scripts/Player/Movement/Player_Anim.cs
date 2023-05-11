@@ -25,17 +25,17 @@ public class Player_Anim : MonoBehaviour
     {
         if (Input.GetKeyDown("l"))
         {
-            string debugMessage = 
-                    "Esta no chao: "        + isGround                          +   "\n"
-                +   "Esta na parede: "      + isWall                            +   "\n"
-                +   "Velocidade X: "        + velX                              +   "\n"
-                +   "Velocidade Y: "        + velY                              +   "\n"
-                +   "Dash: "                + Player_Dash.isDashing             +   "\n"
-                +   "Damage: "              + playerDamage.isDamage             +   "\n"
-                +   ": "                    + Player_Rope.drawingRope           +   "\n"
-                +   ": "                    + Player_Rope.ropeAdvancing         +   "\n"
-                +   ": "                    + Player_Rope.ropeReturning         +   "\n"
-                +   ": "                    + Player_Rope.collidingRope         +   "\n"
+            string debugMessage =
+                    "Esta no chao: " + isGround + "\n"
+                + "Esta na parede: " + isWall + "\n"
+                + "Velocidade X: " + velX + "\n"
+                + "Velocidade Y: " + velY + "\n"
+                + "Dash: " + Player_Dash.isDashing + "\n"
+                + "Damage: " + playerDamage.isDamage + "\n"
+                + ": " + Player_Rope.drawingRope + "\n"
+                + ": " + Player_Rope.ropeAdvancing + "\n"
+                + ": " + Player_Rope.ropeReturning + "\n"
+                + ": " + Player_Rope.collidingRope + "\n"
 
 
                 + "";
@@ -47,10 +47,10 @@ public class Player_Anim : MonoBehaviour
         AnimationOnGround();
         AnimationNoMatterWhere();
         #endregion
-        
+
         #region ParameterForAnimation
         // Referenciar Valores
-        
+
         velY = Player_Physics2D.corpoDoPersonagem.velocity.y;
         velX = Mathf.Abs(Player_Physics2D.corpoDoPersonagem.velocity.x);
 
@@ -68,7 +68,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == false)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false )
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false)
             {
                 #region Jump
                 if (velY > 0.1)
@@ -98,7 +98,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == true)
         {
             if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false)
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false)
             {
                 #region Walk e Iddle
 
@@ -119,13 +119,44 @@ public class Player_Anim : MonoBehaviour
     }
     public void AnimationNoMatterWhere()
     {
-        
+
         #region HookRope
-      
+
+        if (Player_Rope.drawingRope == true)
+        {
+            // Initial position
+            if (Player_Rope.finishInitialPose == false)
+            {
+                if (Player_Rope.ropeUp == true)
+                { ChangeAnimationState(AnimationState.Hook_Up_Initial); }
+                else { ChangeAnimationState(AnimationState.Hook_Initial); }
+            }
+
+            if(Player_Rope.finishInitialPose == true)
+            {
+                // Winding
+                if (Player_Rope.collidingRope == false)
+                {
+                    if (Player_Rope.ropeUp == true)
+                    { ChangeAnimationState(AnimationState.Hook_Up); }
+                    else ChangeAnimationState(AnimationState.Hook);
+                }
+                
+                // Pulling
+                if (Player_Rope.collidingRope == true)
+                {
+                    if (Player_Rope.ropeUp == true)
+                    { ChangeAnimationState(AnimationState.Hook_Up_Grab); }
+                    else ChangeAnimationState(AnimationState.Hook_Engage);
+                }
+            }
+
+        }
+
         #endregion
 
         #region PickUp
-        if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false )
+        if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false)
         { ChangeAnimationState(AnimationState.Lift); }
         #endregion
 
