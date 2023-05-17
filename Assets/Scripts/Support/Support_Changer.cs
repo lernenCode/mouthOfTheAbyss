@@ -7,7 +7,8 @@ public class Support_Changer : MonoBehaviour
 {
     public Transform Support;
     public Transform Robot;
-    public CinemachineVirtualCamera vcam;
+    
+    /*public CinemachineVirtualCamera vcam;
     private void Update()
     {
         if (player_status.isDie)
@@ -15,5 +16,5 @@ public class Support_Changer : MonoBehaviour
            vcam.Follow = Support;
         }
         else { vcam.Follow = Robot;}
-    }
+    }*/
 }

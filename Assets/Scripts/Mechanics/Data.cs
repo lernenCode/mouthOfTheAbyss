@@ -12,13 +12,12 @@ public class Data
     public float[] playerPosition;
     public float[] supportPosition;
     public bool isDie;
-    public string scene;
+    public List<int> scenesAlreadyLoaded;
 
     public Data (saveManager player)
     {
-        scene = SceneManager.GetActiveScene().name;
+        scenesAlreadyLoaded = LoadScenes.scenesAlreadyLoaded;
         isDie = player_status.isDie;
-        Debug.Log(scene);
 
         life = player_status.life;
         energy = player_status.energy;

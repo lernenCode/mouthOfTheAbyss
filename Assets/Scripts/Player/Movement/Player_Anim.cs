@@ -87,8 +87,11 @@ public class Player_Anim : MonoBehaviour
                 #endregion
 
                 #region Slide
-                if (velY < -0.1 && isWall == true)
-                { ChangeAnimationState(AnimationState.Slide); }
+                if (Player_Carried.HolderItem == null)
+                {
+                    if (velY < -0.1 && isWall == true)
+                    { ChangeAnimationState(AnimationState.Slide); }
+                }
                 #endregion
             }
         }
@@ -121,7 +124,6 @@ public class Player_Anim : MonoBehaviour
     {
 
         #region HookRope
-
         if (Player_Rope.drawingRope == true)
         {
             // Initial position
@@ -132,7 +134,7 @@ public class Player_Anim : MonoBehaviour
                 else { ChangeAnimationState(AnimationState.Hook_Initial); }
             }
 
-            if(Player_Rope.finishInitialPose == true)
+            if (Player_Rope.finishInitialPose == true)
             {
                 // Winding
                 if (Player_Rope.collidingRope == false)
@@ -141,7 +143,7 @@ public class Player_Anim : MonoBehaviour
                     { ChangeAnimationState(AnimationState.Hook_Up); }
                     else ChangeAnimationState(AnimationState.Hook);
                 }
-                
+
                 // Pulling
                 if (Player_Rope.collidingRope == true)
                 {
@@ -152,12 +154,15 @@ public class Player_Anim : MonoBehaviour
             }
 
         }
-
         #endregion
 
         #region PickUp
         if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false)
-        { ChangeAnimationState(AnimationState.Lift); }
+        {
+            if (Player_Input.InputDown == true)
+            { ChangeAnimationState(AnimationState.Lift_Down); }
+            else { ChangeAnimationState(AnimationState.Lift); }
+        }
         #endregion
 
         #region Dash

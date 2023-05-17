@@ -10,7 +10,7 @@ public class Player_BetterJump : MonoBehaviour
     private void FixedUpdate()
     {
         // Só posso fazer isso se:
-        if (Player_Rope.drawingRope == false && Player_WallMove.isJumpWall == false)
+        if (Player_Rope.drawingRope == false && Player_WallMove.isJumpWall == false && Player_Carried.CrouchToPickUp == false)
         {
             if (Player_Physics2D.corpoDoPersonagem.velocity.y < 0)
             {

@@ -47,7 +47,7 @@ public class Player_Rope : MonoBehaviour
     private void Update()
     {
         // Condição para iniciar 
-        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy && Player_CheckColision.isWall == false)
+        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy && Player_CheckColision.isWall == false && playerDamage.isDamage == false)
         { drawingRope = true; if (Player_Input.InputUp == true) { ropeUp = true; } else { ropeUp = false; } }
     }
     
@@ -62,7 +62,7 @@ public class Player_Rope : MonoBehaviour
         { ropeMove(); }
 
         // Reiniciar a corda se o ciclo estiver completo
-        if (ropeReturning == true && ropePositionPercentage <= 0)
+        if (ropeReturning == true && ropePositionPercentage <= 0 || playerDamage.isDamage == true)
         { restart(); }
 
         // Cancelar gravidade e movimento
