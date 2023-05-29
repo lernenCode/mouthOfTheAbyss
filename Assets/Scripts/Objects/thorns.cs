@@ -5,7 +5,7 @@ public class thorns : MonoBehaviour
 {
     [Header("Damage")]
     [SerializeField] private LayerMask Player;
-    [SerializeField] private float takeLife;
+    [SerializeField] private int takeLife;
     private BoxCollider2D boxCol2D;
     private bool isThorns;
 

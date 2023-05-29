@@ -15,6 +15,13 @@ public class LoadScenes : MonoBehaviour
         if (scenesAlreadyLoaded == null)
         {
             scenesAlreadyLoaded = new List<int>();
+            // Obtenha todas as cenas carregadas no momento
+            int sceneCount = SceneManager.sceneCount;
+            for (int i = 0; i < sceneCount; i++)
+            {
+                Scene scene = SceneManager.GetSceneAt(i);
+                scenesAlreadyLoaded.Add(scene.buildIndex);
+            }
         }
     }
 

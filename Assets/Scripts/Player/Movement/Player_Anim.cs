@@ -26,16 +26,19 @@ public class Player_Anim : MonoBehaviour
         if (Input.GetKeyDown("l"))
         {
             string debugMessage =
-                    "Esta no chao: " + isGround + "\n"
+                    "Esta no chao: " + isGround
                 + "Esta na parede: " + isWall + "\n"
-                + "Velocidade X: " + velX + "\n"
+                + "Esta morto: " + player_status.isDie
+                + "Quantidade de vida: " + player_status.life + "\n"
+                + "Velocidade X: " + velX
                 + "Velocidade Y: " + velY + "\n"
                 + "Dash: " + Player_Dash.isDashing + "\n"
-                + "Damage: " + playerDamage.isDamage + "\n"
-                + ": " + Player_Rope.drawingRope + "\n"
-                + ": " + Player_Rope.ropeAdvancing + "\n"
-                + ": " + Player_Rope.ropeReturning + "\n"
-                + ": " + Player_Rope.collidingRope + "\n"
+                + "Damage: " + playerDamage.isDamage
+                + "Knocback: " + playerDamage.inKnocback
+                + "drawingRope: " + Player_Rope.drawingRope
+                + "ropeAdvancing: " + Player_Rope.ropeAdvancing
+                + "ropeReturning: " + Player_Rope.ropeReturning
+                + "collidingRope: " + Player_Rope.collidingRope + "\n"
 
 
                 + "";
@@ -67,8 +70,8 @@ public class Player_Anim : MonoBehaviour
     {
         if (isGround == false)
         {
-            if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false)
+            if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
             {
                 #region Jump
                 if (velY > 0.1)
@@ -100,8 +103,8 @@ public class Player_Anim : MonoBehaviour
     {
         if (isGround == true)
         {
-            if (Player_Dash.isDashing == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false)
+            if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
             {
                 #region Walk e Iddle
 
@@ -122,9 +125,17 @@ public class Player_Anim : MonoBehaviour
     }
     public void AnimationNoMatterWhere()
     {
+        #region Death
+        if (player_status.isDie == true)
+        {
+            if (Player_Carried.HolderItem != null)
+            { ChangeAnimationState(AnimationState.Death_Carry); }
+            else { ChangeAnimationState(AnimationState.Death); }
+        }
+        #endregion
 
         #region HookRope
-        if (Player_Rope.drawingRope == true)
+        if (Player_Rope.drawingRope == true && player_status.isDie == false)
         {
             // Initial position
             if (Player_Rope.finishInitialPose == false)
@@ -157,7 +168,7 @@ public class Player_Anim : MonoBehaviour
         #endregion
 
         #region PickUp
-        if (Player_Carried.CrouchToPickUp == true && playerDamage.isDamage == false)
+        if (Player_Carried.CrouchToPickUp == true && playerDamage.inKnocback == false && player_status.isDie == false)
         {
             if (Player_Input.InputDown == true)
             { ChangeAnimationState(AnimationState.Lift_Down); }
@@ -166,17 +177,17 @@ public class Player_Anim : MonoBehaviour
         #endregion
 
         #region Dash
-        if (Player_Dash.isDashing == true && playerDamage.isDamage == false)
+        if (Player_Dash.isDashing == true && playerDamage.inKnocback == false && player_status.isDie == false)
         { ChangeAnimationState(AnimationState.Dash); }
         #endregion
 
         #region Hurt
-        if (playerDamage.isDamage == true)
+        if (playerDamage.inKnocback == true && player_status.isDie == false)
         { ChangeAnimationState(AnimationState.Hurt); }
         #endregion
 
         #region Throwable
-        if (Player_Carried.Throwable == true && playerDamage.isDamage == false)
+        if (Player_Carried.Throwable == true && playerDamage.inKnocback == false && player_status.isDie == false)
         { ChangeAnimationState(AnimationState.Throw); }
         #endregion
     }

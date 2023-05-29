@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class Data
 {
-    public float life;
+    public int life;
     public float energy;
     public float stamina;
     public float[] playerPosition;

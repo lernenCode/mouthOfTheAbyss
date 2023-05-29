@@ -5,13 +5,12 @@ using UnityEngine;
 public class player_status : MonoBehaviour
 {
     [Header("Manager points")]
-    public static float life = 100;
+    public static int life = 3;
     public static float energy = 100;
     public static float stamina = 100;
 
     [Header("Manager Death")]
     public static bool isDie;
-    static private bool lockChanger = false;
 
     [Header("Manage Damage")]
     public static bool recovery = true;
@@ -27,19 +26,15 @@ public class player_status : MonoBehaviour
         #region canDamageTimer
         if(recovery == true) { StartCoroutine(Player_IEnumerator.canDamageTime());}
         #endregion
-
-        #region  changerPoints
-        if(isDie && lockChanger == false){addLife(100); addEnergy(100); addStamina(100); lockChanger = true;}
-        #endregion
     }
 
     #region Manager Ui LifeBar
 
     #region addLife
-        public static void addLife(float value)
+        public static void addLife(int value)
         {
 
-            life += value;
+            life = value;
             player_UI.barLife.fillAmount = life / 100;
         
             // Evitar extrapolar
@@ -51,7 +46,7 @@ public class player_status : MonoBehaviour
     #endregion
 
     #region reduceLife
-        public static void reduceLife(float value)
+        public static void reduceLife(int value)
         {
             if (life > 0)
             {
@@ -64,33 +59,10 @@ public class player_status : MonoBehaviour
                 }
             }
 
-            #region Death
-                if (life <= 0)
-                {
-                    isDie = true;
-                    life = 0;// Evitar extrapolar
-                }
-
-                if (isDie)
-                {
-                    // Ligar colision
-                    Support_Physics2D.boxCol.isTrigger = false;
-
-                    // Desligar simulação
-                    Player_Physics2D.corpoDoPersonagem.simulated = false;
-                    
-                    // Cancelar movimento
-                    Player_Physics2D.ResetVelocity(); 
-                }
-                
-                // devolver as coisas
-                else
-                {
-                    lockChanger = false;
-                    Support_Physics2D.boxCol.isTrigger = true;
-                    Support_Physics2D.ResetVelocity();
-                }
-            #endregion
+            if(life <= 0)
+            {
+                isDie = true;
+            }
         }
     #endregion
 

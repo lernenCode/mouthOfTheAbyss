@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class playerDamage : MonoBehaviour
 {
-    [Header ("Player")]
+    [Header("Player")]
     [SerializeField] public LayerMask Player;
-    [SerializeField] public float damage;
+    [SerializeField] public int damage;
     private bool IsTouching;
     public static bool isDamage;
+    public static bool inKnocback;
     private BoxCollider2D boxCol;
 
     // Start is called before the first frame update
@@ -21,18 +22,13 @@ public class playerDamage : MonoBehaviour
     void Update()
     {
         IsTouching = Physics2D.IsTouchingLayers(boxCol, Player);
-        if (IsTouching)
-        {
-            if(isDamage == false )
-            {
-                knocback();
-            }
-        }
+        if (IsTouching == true && isDamage == false) { knocback(); }
     }
 
     void knocback()
     {
-        Player_Input.canMove =  false;
+        Player_Input.canMove = false;
+        inKnocback = true;
         isDamage = true;
         playerKnockback.knocback(damage, transform.position);
     }
