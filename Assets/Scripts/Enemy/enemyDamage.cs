@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDamage : MonoBehaviour
+public class enemyDamage : MonoBehaviour
 {
     [SerializeField] private int life;
     [SerializeField] private LayerMask whatHurtsMe;
-    [SerializeField] private readonly float knockbackForce;
-    [SerializeField] private readonly float invulnerabilityDuration;
+    [SerializeField] private float knockbackForce;
+    [SerializeField] private float invulnerabilityDuration;
     private BoxCollider2D boxCol2D;
     private Rigidbody2D rb;
     private bool iHurt, canTakeDamage = true;
