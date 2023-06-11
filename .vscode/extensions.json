@@ -8,6 +8,7 @@
         "visualstudioexptteam.vscodeintellicode",
         "dracula-theme.theme-dracula",
         "deitry.unity-debug",
-        "ms-dotnettools.csharp"
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit"
     ]
 }

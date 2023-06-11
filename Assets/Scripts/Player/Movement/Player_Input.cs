@@ -16,6 +16,7 @@ public class Player_Input : MonoBehaviour
     public static bool InputGrab;
     public static bool InputCarry;
     public static bool InputRope;
+    public static bool InputAttack;
     public static bool InputCarryUP;
 
     [Header("Manager")]
@@ -42,6 +43,13 @@ public class Player_Input : MonoBehaviour
         {
             if (player_status.isDie == false)
             {
+                // InputAttack
+                if (Input.GetButtonDown("Attack"))
+                {
+                    InputAttack = true;
+                }
+                else { InputAttack = false; }
+
                 // InputRope
                 if (Input.GetButtonDown("Rope") && Player_Carried.HolderItem == null)
                 {

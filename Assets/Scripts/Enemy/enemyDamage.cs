@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyDamage : MonoBehaviour
+public class EnemyDamage : MonoBehaviour
 {
     [SerializeField] private int life;
     [SerializeField] private LayerMask whatHurtsMe;
-    [SerializeField] private float knockbackForce;
-    [SerializeField] private float invulnerabilityDuration;
+    [SerializeField] private readonly float knockbackForce;
+    [SerializeField] private readonly float invulnerabilityDuration;
     private BoxCollider2D boxCol2D;
     private Rigidbody2D rb;
     private bool iHurt, canTakeDamage = true;
@@ -24,7 +24,7 @@ public class enemyDamage : MonoBehaviour
     
     void Update()
     {
-        iHurt = touchedWhatHurtsMe();
+        iHurt = TouchedWhatHurtsMe();
 
         if(iHurt && canTakeDamage){Damage();}
 
@@ -41,7 +41,7 @@ public class enemyDamage : MonoBehaviour
         }
     }
 
-    private bool touchedWhatHurtsMe()
+    private bool TouchedWhatHurtsMe()
     {
         Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
 
@@ -65,16 +65,14 @@ public class enemyDamage : MonoBehaviour
 
     private void Damage()
     {
-        // Destruir objeto que me deu dano
-        Destroy(touchedHurts.collider.gameObject);
         // criar particula
         life--;
         lastImpactPoint = transform.position;
-        knockback();
+        Knockback();
         StartInvulnerabilityTimer();
     }
 
-    private void knockback()
+    private void Knockback()
     {
         // não funciona ver porque
         Vector2 knockbackDirection = rb.position - (Vector2)lastImpactPoint;

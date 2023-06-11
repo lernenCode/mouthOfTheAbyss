@@ -71,7 +71,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == false)
         {
             if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false && Player_Attack.canAttack == true)
             {
                 #region Jump
                 if (velY > 0.1)
@@ -104,7 +104,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == true)
         {
             if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false && Player_Attack.canAttack == true)
             {
                 #region Walk e Iddle
 
@@ -125,6 +125,11 @@ public class Player_Anim : MonoBehaviour
     }
     public void AnimationNoMatterWhere()
     {
+        #region Attack
+        if(Player_Attack.canAttack == false && Player_Attack.lockAttack == false)
+        { { ChangeAnimationState(AnimationState.Attack); }}
+        #endregion
+
         #region Death
         if (player_status.isDie == true)
         {
