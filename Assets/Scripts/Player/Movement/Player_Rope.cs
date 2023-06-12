@@ -47,7 +47,7 @@ public class Player_Rope : MonoBehaviour
     private void Update()
     {
         // Condição para iniciar 
-        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy && Player_CheckColision.isWall == false && playerDamage.isDamage == false)
+        if (Player_Input.InputRope == true && drawingRope == false && player_status.energy >= takeEnergy && Player_CheckColision.isWall == false && playerDamage.isDamage == false && Player_Carried.CrouchToPickUp == false && Player_Carried.HolderItem == null)
         { drawingRope = true; if (Player_Input.InputUp == true) { ropeUp = true; } else { ropeUp = false; } }
     }
     

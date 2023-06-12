@@ -13,8 +13,9 @@ public class Player_IEnumerator : MonoBehaviour
         Player_Input.canMove = true;
         Player_Dash.runningDash = false;
         Player_Dash.isDashing = false;
-        Player_Physics2D.ResetVelocity();
         Player_Dash.dashInCooldown = true;
+        Player_Physics2D.ResetVelocity();
+        
     }
 
     public static IEnumerator cooldownDash(float dashCooldown) // cooldown de Dash⌚

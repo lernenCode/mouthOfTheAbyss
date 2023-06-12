@@ -5,7 +5,7 @@ using UnityEngine;
 public class ColliderInteraction : MonoBehaviour
 {
     [SerializeField] private LayerMask interaction;
-    [SerializeField] private ParticleSystem particle;
+    private ParticleSystem particle;
     private bool IsTouching;
 
     private Collider2D col;
@@ -27,8 +27,6 @@ public class ColliderInteraction : MonoBehaviour
             if(Player_Carried.Throwablefinished)
             {
                 // Desligar componentes (SpriteRenderer, Collider2D, Rigidbody2D)
-
-
                 if (spriteRenderer != null)
                     spriteRenderer.enabled = false;
 
@@ -42,7 +40,7 @@ public class ColliderInteraction : MonoBehaviour
                 particle?.Play();
 
                 // Destruir o GameObject após a duração da partícula
-                float particleDuration = particle.main.duration;
+                float particleDuration = particle.main.startLifetime.constant;
                 Destroy(gameObject, particleDuration);
 
                 Player_Carried.Throwablefinished = false;

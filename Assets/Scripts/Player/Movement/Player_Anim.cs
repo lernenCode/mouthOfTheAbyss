@@ -26,20 +26,25 @@ public class Player_Anim : MonoBehaviour
         if (Input.GetKeyDown("l"))
         {
             string debugMessage =
-                    "Esta no chao: " + isGround
+                "-=DEBUG LOG ALL=-" + "\n"
+
+                + "Esta no chao: " + isGround + "\n"
                 + "Esta na parede: " + isWall + "\n"
                 + "Esta morto: " + player_status.isDie
                 + "Quantidade de vida: " + player_status.life + "\n"
                 + "Velocidade X: " + velX
                 + "Velocidade Y: " + velY + "\n"
                 + "Dash: " + Player_Dash.isDashing + "\n"
-                + "Damage: " + playerDamage.isDamage
-                + "Knocback: " + playerDamage.inKnocback
-                + "drawingRope: " + Player_Rope.drawingRope
-                + "ropeAdvancing: " + Player_Rope.ropeAdvancing
-                + "ropeReturning: " + Player_Rope.ropeReturning
+                + "Damage: " + playerDamage.isDamage + "\n"
+                + "Knocback: " + playerDamage.inKnocback + "\n"
+                + "drawingRope: " + Player_Rope.drawingRope + "\n"
+                + "ropeAdvancing: " + Player_Rope.ropeAdvancing + "\n"
+                + "ropeReturning: " + Player_Rope.ropeReturning + "\n"
                 + "collidingRope: " + Player_Rope.collidingRope + "\n"
-
+                + "HolderItem: " + Player_Carried.HolderItem + "\n"
+                + "CrouchToPickUp: " + Player_Carried.CrouchToPickUp + "\n"
+                + "Throwable: " + Player_Carried.Throwable + "\n"
+                + "Throwablefinished: " + Player_Carried.Throwablefinished + "\n"
 
                 + "";
             Debug.Log(debugMessage);
@@ -71,7 +76,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == false)
         {
             if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false && Player_Attack.canAttack == true)
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
             {
                 #region Jump
                 if (velY > 0.1)
@@ -104,7 +109,7 @@ public class Player_Anim : MonoBehaviour
         if (isGround == true)
         {
             if (Player_Dash.isDashing == false && playerDamage.inKnocback == false && Player_Carried.CrouchToPickUp == false
-            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false && Player_Attack.canAttack == true)
+            && Player_Carried.Throwable == false && Player_Rope.drawingRope == false && player_status.isDie == false)
             {
                 #region Walk e Iddle
 
@@ -125,11 +130,6 @@ public class Player_Anim : MonoBehaviour
     }
     public void AnimationNoMatterWhere()
     {
-        #region Attack
-        if(Player_Attack.canAttack == false && Player_Attack.lockAttack == false)
-        { { ChangeAnimationState(AnimationState.Attack); }}
-        #endregion
-
         #region Death
         if (player_status.isDie == true)
         {
@@ -140,7 +140,8 @@ public class Player_Anim : MonoBehaviour
         #endregion
 
         #region HookRope
-        if (Player_Rope.drawingRope == true && player_status.isDie == false)
+        if (Player_Rope.drawingRope == true && player_status.isDie == false 
+        && Player_Carried.CrouchToPickUp == false && Player_Carried.HolderItem == null)
         {
             // Initial position
             if (Player_Rope.finishInitialPose == false)
@@ -173,7 +174,8 @@ public class Player_Anim : MonoBehaviour
         #endregion
 
         #region PickUp
-        if (Player_Carried.CrouchToPickUp == true && playerDamage.inKnocback == false && player_status.isDie == false)
+        if (Player_Carried.CrouchToPickUp == true && playerDamage.inKnocback == false 
+        && player_status.isDie == false && Player_Rope.drawingRope == false)
         {
             if (Player_Input.InputDown == true)
             { ChangeAnimationState(AnimationState.Lift_Down); }

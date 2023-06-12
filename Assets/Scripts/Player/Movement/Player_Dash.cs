@@ -37,9 +37,6 @@ public class Player_Dash : MonoBehaviour
         // executar o Dash 
         if (isDashing == true)
         {
-            // Tirar ponto de poder
-            
-
             // Iniciar contador⌚
             StartCoroutine(Player_IEnumerator.durationDash(dashDuration));
             

@@ -6,6 +6,7 @@ public class Player_Input : MonoBehaviour
     #region Variaveis
 
     [Header("Inputs")]
+    public static Vector2 moveInput;
     public static bool InputRight;
     public static bool InputLeft;
     public static bool InputDown;
@@ -43,13 +44,10 @@ public class Player_Input : MonoBehaviour
         {
             if (player_status.isDie == false)
             {
-                // InputAttack
-                if (Input.GetButtonDown("Attack"))
-                {
-                    InputAttack = true;
-                }
-                else { InputAttack = false; }
-
+                // MoveInput
+                moveInput.x = Input.GetAxisRaw("Horizontal");
+		        moveInput.y = Input.GetAxisRaw("Vertical");
+                
                 // InputRope
                 if (Input.GetButtonDown("Rope") && Player_Carried.HolderItem == null)
                 {
