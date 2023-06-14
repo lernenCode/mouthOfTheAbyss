@@ -8,7 +8,7 @@
         "visualstudioexptteam.vscodeintellicode",
         "dracula-theme.theme-dracula",
         "deitry.unity-debug",
-        "ms-dotnettools.csharp",
-        "ms-dotnettools.csdevkit"
+        "shinganeuler.vscode-unity-debug",
+        "p1gd0g.unity-debug-301"
     ]
 }
