@@ -17,9 +17,7 @@ public class Player_Rope : MonoBehaviour
     public static bool finishInitialPose;
 
     [Header("Layers")]
-    [SerializeField] private LayerMask whatIsColision;
-    [SerializeField] private LayerMask whatIsCatchable;
-    [SerializeField] private LayerMask whatIsPlatform;
+    [SerializeField] private LayerMask whatIsInteractive;
 
     [Header("Variables Drawline")]
     [SerializeField] private Transform startingPoint;
@@ -92,7 +90,7 @@ public class Player_Rope : MonoBehaviour
 
         // Verificar colisão
         Vector3 direction = (endPoint.position - startingPoint.position).normalized;
-        hit = Physics2D.Linecast(startingPoint.position, startingPoint.position + direction * (distancePercent * ropePositionPercentage + 0.2f), whatIsColision | whatIsCatchable | whatIsPlatform);
+        hit = Physics2D.Linecast(startingPoint.position, startingPoint.position + direction * (distancePercent * ropePositionPercentage + 0.2f), whatIsInteractive);
         if (hit) { collidingRope = true; }
 
         // Trocar estados | Avançar > Recuar 
@@ -140,6 +138,10 @@ public class Player_Rope : MonoBehaviour
             if (Player_CheckColision.isRoof == false)
             { Player_WallMove.isJumpRope = true; }
         }
+
+        // Impacto do Hook
+        if(Player_CheckColision.isHook)
+        { restart(); }
     }
 
     void restart()

@@ -12,13 +12,22 @@ public class Player_Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Player_Input.InputRight && Player_Input.canMove == true || Player_Input.InputLeft && Player_Input.canMove == true)
+        // Se nao tiver fazendo nenhum outro movimento
+        if (Player_Dash.runningDash == false && Player_Rope.drawingRope == false
+        && Player_WallMove.isJumpWall == false)
         {
-            if (Player_Dash.runningDash == false && Player_Rope.drawingRope == false && Player_WallMove.isJumpWall == false && player_status.isDie == false)
+            // Movimento
+            if (Player_Input.InputRight || Player_Input.InputLeft)
             {
                 if (Player_Carried.HolderItem != null)
                 { run(debuffSpeed); }
                 else { run(moveSpeed); }
+            }
+
+            // Parar movimento
+            else if (Player_CheckColision.isGround || Player_CheckColision.isPlatformGrounded)
+            {
+                Player_Physics2D.corpoDoPersonagem.velocity = new Vector2(0, Player_Physics2D.corpoDoPersonagem.velocity.y);
             }
         }
     }
@@ -31,15 +40,6 @@ public class Player_Move : MonoBehaviour
         float accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : deccelaration;
         float movement = Mathf.Pow(Mathf.Abs(speedDif) * accelRate, velPower) * Mathf.Sign(speedDif);
 
-        // Parar movimento
-        if (Player_Dash.runningDash == false && Player_Rope.drawingRope == false
-        && Player_WallMove.isJumpWall == false && playerDamage.inKnocback == false)
-        {
-            if (Player_CheckColision.isGround == true || Player_CheckColision.isPlatformGrounded == true) // se tiver no chao ou plataform
-            { Player_Physics2D.corpoDoPersonagem.velocity = new Vector2(0, Player_Physics2D.corpoDoPersonagem.velocity.y); }
-        }
-
-        // Fazer movimento
         Player_Physics2D.corpoDoPersonagem.AddForce(movement * Vector2.right);
 
     }

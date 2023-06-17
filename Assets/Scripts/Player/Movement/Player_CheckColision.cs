@@ -19,6 +19,9 @@ public class Player_CheckColision : MonoBehaviour
     public static bool isWallRight;
     public static bool isWallLeft;
 
+    [Header("HookCheck")]
+    public static bool isHook;
+
     [Header("Npc")]
     public static bool inNpcRange;
 
@@ -26,11 +29,15 @@ public class Player_CheckColision : MonoBehaviour
     [SerializeField] private LayerMask whatisGround;
     [SerializeField] private LayerMask whatIsCatchable;
     [SerializeField] private LayerMask whatIsPlatform;
+    [SerializeField] private LayerMask whatIsHook;
     [SerializeField] private LayerMask whatIsNPC;
     [SerializeField] private BoxCollider2D boxCol2D;
 
     private void Update()
     {
+        // Hook
+        isHook = isHooked();
+
         // Npc
         inNpcRange = npcTalkRange();
 
@@ -52,6 +59,18 @@ public class Player_CheckColision : MonoBehaviour
         if (isPlatformedRight() || isPlatformedLeft() || isPlatformed()) { isPlatform = true; } else { isPlatform = false; }
         if (isWalledRight() || isWalledLeft()) { isWall = true; } else { isWall = false; }
     }
+
+    #region CheckHook
+    private bool isHooked()
+    {
+        RaycastHit2D upHitHook = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.up, 0.1f, whatIsHook);
+        RaycastHit2D downHitHook = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.down, 0.1f, whatIsHook);
+        RaycastHit2D leftHitHook = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.left, 0.1f, whatIsHook);
+        RaycastHit2D rightHitHook = Physics2D.BoxCast(boxCol2D.bounds.center, boxCol2D.bounds.size, 0f, Vector2.right, 0.1f, whatIsHook);
+
+        return upHitHook.collider != null || downHitHook.collider != null || leftHitHook.collider != null || rightHitHook.collider != null;
+    }
+    #endregion
 
     #region CheckRoof
     private bool isRoofed()

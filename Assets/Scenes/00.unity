@@ -1232,7 +1232,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0595cd51dc351a847920d099d9a3ba0b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 0
   m_CollisionDetection: 1
@@ -1266,10 +1266,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce6585219e59c5c4796d4a6c26275e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deccelaration: 8
+  deccelaration: 13
   acceleration: 8
-  debuffSpeed: 5.6
-  moveSpeed: 8
+  debuffSpeed: 5
+  moveSpeed: 7
   velPower: 1.2
 --- !u!114 &557519953
 MonoBehaviour:
@@ -1653,19 +1653,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab89e3956ebcbb9419233905d2e74568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whatIsColision:
+  whatIsInteractive:
     serializedVersion: 2
-    m_Bits: 8
-  whatIsCatchable:
-    serializedVersion: 2
-    m_Bits: 64
-  whatIsPlatform:
-    serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 32968
   startingPoint: {fileID: 299984685}
   endPoint: {fileID: 910366659}
   maxDistance: 5
-  ropeSpeed: 1.5
+  ropeSpeed: 1.2
   moveSpeed: 5
   takeEnergy: 15
 --- !u!1 &566615340
@@ -3445,6 +3439,9 @@ MonoBehaviour:
   whatIsPlatform:
     serializedVersion: 2
     m_Bits: 4096
+  whatIsHook:
+    serializedVersion: 2
+    m_Bits: 32768
   whatIsNPC:
     serializedVersion: 2
     m_Bits: 8192
