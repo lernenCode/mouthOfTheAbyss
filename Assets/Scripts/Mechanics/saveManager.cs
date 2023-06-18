@@ -54,7 +54,7 @@ public class saveManager : MonoBehaviour
         player_UI.barStamina.fillAmount = player_status.stamina / 100;
 
         // Bools
-        player_status.isDie = data.isDie;
+        player_status.isDie = false;
 
         // Position player
         positionPlayer.x = data.playerPosition[0];

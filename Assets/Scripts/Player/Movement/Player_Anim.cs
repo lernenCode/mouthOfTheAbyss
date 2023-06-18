@@ -97,7 +97,7 @@ public class Player_Anim : MonoBehaviour
                 #region Slide
                 if (Player_Carried.HolderItem == null)
                 {
-                    if (velY < -0.1 && isWall == true)
+                    if (velY < -0.1 && isWall == true && Player_WallMove.isSliding == true)
                     { ChangeAnimationState(AnimationState.Slide); }
                 }
                 #endregion

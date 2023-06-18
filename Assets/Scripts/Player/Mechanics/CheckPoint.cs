@@ -12,11 +12,8 @@ public class CheckPoint : MonoBehaviour
     }
     void Update()
     {
-        // Verficar colisao
-        colider = Physics2D.IsTouchingLayers(boxCol2D, checkPoint);
-        if(colider){save();}
+        // Verficar colisao e Salvar
+        if(Physics2D.IsTouchingLayers(boxCol2D, checkPoint) && player_status.isDie == false)
+        {gameObject.GetComponent<saveManager>().SavePlayer();}
     }
-
-    public void save()
-    {gameObject.GetComponent<saveManager>().SavePlayer();}
 }

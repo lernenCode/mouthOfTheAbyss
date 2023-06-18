@@ -11,13 +11,11 @@ public class Data
     public float stamina;
     public float[] playerPosition;
     public float[] supportPosition;
-    public bool isDie;
     public List<int> scenesAlreadyLoaded;
 
     public Data (saveManager player)
     {
         scenesAlreadyLoaded = LoadScenes.scenesAlreadyLoaded;
-        isDie = player_status.isDie;
 
         life = player_status.life;
         energy = player_status.energy;

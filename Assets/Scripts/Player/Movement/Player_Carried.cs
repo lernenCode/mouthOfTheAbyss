@@ -69,12 +69,12 @@ public class Player_Carried : MonoBehaviour
 
     public void PickUpItem()
     {
+        // parar animação de pegar
+        CrouchToPickUp = false;
+        Player_Input.canMove = true;
+
         if (CollisionObject.collider != null && HolderItem == null)
         {
-            // parar animação de pegar
-            CrouchToPickUp = false;
-            Player_Input.canMove = true;
-
             // Passar quem é meu item
             HolderItem = CollisionObject.collider.gameObject;
 

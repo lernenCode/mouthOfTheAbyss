@@ -31,7 +31,7 @@ public class Player_WallMove : MonoBehaviour
                     if (Player_Input.InputRight || Player_Input.InputLeft)
                     {
                         isSliding = true;
-                    }
+                    } 
                 }
             }
             else { isSliding = false; }
