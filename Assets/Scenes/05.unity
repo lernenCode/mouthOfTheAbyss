@@ -622,7 +622,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 21
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -942,7 +942,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -982,7 +982,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 14
+      m_TileSpriteIndex: 18
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1181,24 +1181,24 @@ Tilemap:
     m_Data: {fileID: -1727983934, guid: e61297425911f0b85abbf4de1118202b, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1421486028, guid: e61297425911f0b85abbf4de1118202b, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1048812168, guid: e61297425911f0b85abbf4de1118202b, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 11
     m_Data: {fileID: 695971701, guid: e61297425911f0b85abbf4de1118202b, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1048812168, guid: e61297425911f0b85abbf4de1118202b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 966435043, guid: e61297425911f0b85abbf4de1118202b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: -25824723, guid: e61297425911f0b85abbf4de1118202b, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 1421486028, guid: e61297425911f0b85abbf4de1118202b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -566944564, guid: e61297425911f0b85abbf4de1118202b, type: 3}
   - m_RefCount: 2

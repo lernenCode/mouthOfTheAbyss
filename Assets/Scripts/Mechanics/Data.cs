@@ -10,7 +10,6 @@ public class Data
     public float energy;
     public float stamina;
     public float[] playerPosition;
-    public float[] supportPosition;
     public List<int> scenesAlreadyLoaded;
 
     public Data (saveManager player)
@@ -25,10 +24,5 @@ public class Data
         playerPosition[0] = player_lastPosition.lastPosition.x;
         playerPosition[1] = player_lastPosition.lastPosition.y;
         playerPosition[2] = player_lastPosition.lastPosition.z;
-
-        supportPosition = new float[3];
-        supportPosition[0] = player_lastPosition.lastPositionSupport.x;
-        supportPosition[1] = player_lastPosition.lastPositionSupport.y;
-        supportPosition[2] = player_lastPosition.lastPositionSupport.z;
     }
 }

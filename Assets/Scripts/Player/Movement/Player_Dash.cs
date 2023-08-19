@@ -37,6 +37,9 @@ public class Player_Dash : MonoBehaviour
         // executar o Dash 
         if (isDashing == true)
         {
+            // Ghost effect
+            
+
             // Iniciar contador⌚
             StartCoroutine(Player_IEnumerator.durationDash(dashDuration));
             

@@ -7,15 +7,24 @@ public class Player_IEnumerator : MonoBehaviour
     #region "Dash"
     public static IEnumerator durationDash(float dashDuration) // Duracao de dash⌚
     {
+        // Executar EFXs
+        //GhostEffect.isGhost = true;
+
+        // Garantir fisicas
         Player_Physics2D.ResetVelocity();
         Player_Input.canMove = false;
+
         yield return new WaitForSeconds(dashDuration);
+
+        // Garantir fisicas
         Player_Input.canMove = true;
         Player_Dash.runningDash = false;
         Player_Dash.isDashing = false;
         Player_Dash.dashInCooldown = true;
         Player_Physics2D.ResetVelocity();
-        
+
+        // Stop EFXs
+        //GhostEffect.isGhost = false;
     }
 
     public static IEnumerator cooldownDash(float dashCooldown) // cooldown de Dash⌚

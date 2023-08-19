@@ -6,11 +6,9 @@ using UnityEngine.SceneManagement;
 public class saveManager : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject support;
 
     private bool loading = false;
     private Vector3 positionPlayer;
-    private Vector3 positionSupport;
 
     private void Update()
     {
@@ -61,19 +59,6 @@ public class saveManager : MonoBehaviour
         positionPlayer.y = data.playerPosition[1];
         positionPlayer.z = data.playerPosition[2];
         player.transform.position = positionPlayer;
-
-        // Position Support
-        positionSupport.x = data.supportPosition[0];
-        positionSupport.y = data.supportPosition[1];
-        positionSupport.z = data.supportPosition[2];
-        support.transform.position = positionSupport;
-
-
-        if (player_status.isDie == false)
-        {
-            Support_Physics2D.boxCol.isTrigger = true;
-            Support_Physics2D.ResetVelocity();
-        }
 
     }
 }
